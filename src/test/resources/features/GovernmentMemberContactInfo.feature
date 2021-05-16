@@ -1,6 +1,6 @@
 Feature: Government member contact information
 
-   @Regression @GovernmentMember @Smoke
+  @ValidateMemberEmail
   Scenario Outline: Validate the member and email details in government member contact information page
     
     Login to the application
@@ -19,7 +19,7 @@ Feature: Government member contact information
       | test_id | sheetName                 |
       |       1 | GovtMemberContactInfEmail |
 
-  @Regression @GovernmentMember @Update
+  @updateMemberEmail
   Scenario Outline: Update the email address in government member contact information page and verify in government email history page
     
     Login to the application
@@ -38,7 +38,7 @@ Feature: Government member contact information
       | test_id | sheetName                 |
       |       2 | GovtMemberContactInfEmail |
 
-  @Regression @GovernmentMember 
+  @ValidateMemberPhone
   Scenario Outline: Validate the member phone number details in government member contact information page
     
     Login to the application
@@ -56,7 +56,7 @@ Feature: Government member contact information
       | test_id | sheetName                 |
       |       1 | GovtMemberContactInfPhone |
 
-  @Regression @GovernmentMember @Update
+  @UpdatePhoneDetails
   Scenario Outline: Update the mobile preferences in government member contact information page and verify in phone history page
     
     Login to the application
@@ -75,7 +75,7 @@ Feature: Government member contact information
       |       2 | GovtMemberContactInfPhone |
       |       3 | GovtMemberContactInfPhone |
 
-  @Regression @GovernmentMember 
+  @TextAndMail
   Scenario Outline: Validate the member text number details in government member contact information page
     
     Login to the application

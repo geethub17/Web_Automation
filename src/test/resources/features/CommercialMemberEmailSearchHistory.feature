@@ -1,6 +1,6 @@
 Feature: Email search history
 
-    @Regression @CommercialMember @Smoke
+  @sortingEmail
   Scenario Outline: Validate the sorting order in email history page
     
     Login to the application
@@ -17,7 +17,7 @@ Feature: Email search history
       | test_id | sheetName                      |
       |       2 | Cmrcl_Mbr_Text_Mail_Email_Pref |
 
-    @Regression @CommercialMember @Alert
+  @1year
   Scenario Outline: Search previous 1 year button validation
     
     Login to the application
@@ -34,7 +34,7 @@ Feature: Email search history
       | test_id | sheetName                      |
       |       3 | Cmrcl_Mbr_Text_Mail_Email_Pref |
 
-    @Regression @CommercialMember @Alert
+  @errorEmailhistory
   Scenario Outline: Error messages validation in email history search screen.
     
     Login to the application

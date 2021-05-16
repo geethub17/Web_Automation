@@ -1,6 +1,6 @@
 Feature: Preference search history
 
-  @Regression @PreferenceHistory @Smoke
+  @sortingpreference
   Scenario Outline: Validate the sorting order in preference history page
     
     Login to the application
@@ -18,7 +18,7 @@ Feature: Preference search history
       | test_id | sheetName                      |
       |      13 | Cmrcl_Mbr_Text_Mail_Email_Pref |
 
-  @Regression @PreferenceHistory 
+  @1year
   Scenario Outline: Search previous 1 year button validation
     
     Login to the application
@@ -36,7 +36,7 @@ Feature: Preference search history
       | test_id | sheetName                      |
       |      14 | Cmrcl_Mbr_Text_Mail_Email_Pref |
 
-  @Regression @PreferenceHistory @Alert
+  @errorpreferencehistory
   Scenario Outline: Error messages validation in preference history search screen.
     
     Login to the application

@@ -1,6 +1,6 @@
 Feature: Email search history
 
-  @Regression @GovernmentMember @Smoke
+  @sortingEmail
   Scenario Outline: Validate the sorting order in government email history page
     
     Login to the application
@@ -17,7 +17,7 @@ Feature: Email search history
       | test_id | sheetName                      |
       |       2 | Govt_Mbr_Text_Mail_Email_Pref |
 
-  @Regression @GovernmentMember 
+  @6months
   Scenario Outline: Search previous 1 year button validation in government email history page
     
     Login to the application
@@ -34,7 +34,7 @@ Feature: Email search history
       | test_id | sheetName                      |
       |       3 | Govt_Mbr_Text_Mail_Email_Pref |
 
-  @Regression @GovernmentMember @Alert
+  @errorEmailhistory
   Scenario Outline: Error messages validation in government email history search screen.
     
     Login to the application
