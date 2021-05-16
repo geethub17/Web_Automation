@@ -1,6 +1,6 @@
 Feature: Commercial member contact information
 
-  @ValidateMemberEmail
+  @Regression @CommercialMember @Smoke
   Scenario Outline: Validate the member and email details in commercial member contact information page
     
     Login to the application
@@ -19,7 +19,7 @@ Feature: Commercial member contact information
       | test_id | sheetName                       |
       |       1 | CommercialMemberContactInfEmail |
 
-  @updateMemberEmail
+    @Regression @CommercialMember @Update
   Scenario Outline: Update the email address in commercial member contact information page and verify in email history page
     
     Login to the application
@@ -38,7 +38,7 @@ Feature: Commercial member contact information
       | test_id | sheetName                       |
       |       2 | CommercialMemberContactInfEmail |
 
-  @ValidateMemberPhone
+  @Regression @CommercialMember 
   Scenario Outline: Validate the member phone number details in commercial member contact information page
     
     Login to the application
@@ -56,7 +56,7 @@ Feature: Commercial member contact information
       | test_id | sheetName                       |
       |       1 | CommercialMemberContactInfPhone |
 
-  @UpdatePhoneDetails
+    @Regression @CommercialMember @Update
   Scenario Outline: Update the mobile preferences in commercial member contact information page and verify in phone history page
     
     Login to the application
@@ -75,7 +75,7 @@ Feature: Commercial member contact information
       |       2 | CommercialMemberContactInfPhone |
       |       3 | CommercialMemberContactInfPhone |
 
-  @TextAndMail
+    @Regression @CommercialMember 
   Scenario Outline: Validate the member text number details and member mailing address details in commercial member contact information page
     
     Login to the application

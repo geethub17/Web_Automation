@@ -1,6 +1,6 @@
 Feature: Commercial member preferences
 
-  @Regression
+  @Regression @GovernmentMember @Update
   Scenario Outline: Updated and validate the member information and staying healthy plans in member preference tab
     
     Login to the application

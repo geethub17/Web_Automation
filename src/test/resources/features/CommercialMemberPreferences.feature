@@ -1,6 +1,6 @@
 Feature: Commercial member preferences
 
-  @updatePreferences
+  @  @Regression @CommercialMember @Update
   Scenario Outline: Update and validate the member information and staying healthy plans in member preference tab
     
     Login to the application
@@ -37,7 +37,7 @@ Feature: Commercial member preferences
       |       8 | Cmrcl_Mbr_Text_Mail_Email_Pref |
       |       9 | Cmrcl_Mbr_Text_Mail_Email_Pref |
 
-  @updateAllPreferencesWellnessPrograms
+  @  @Regression @CommercialMember @Update
   Scenario Outline: Update and validate all the preference options under Health and Wellness Programs and Discounts (Optional) section
     
     Login to the application
@@ -54,7 +54,7 @@ Feature: Commercial member preferences
       |      10 | Cmrcl_Mbr_Text_Mail_Email_Pref |
       |      11 | Cmrcl_Mbr_Text_Mail_Email_Pref |
 
-  @updateLanguage
+  @  @Regression @CommercialMember @Update
   Scenario Outline: Validate language update, reset and error messages in member preference tab
     
     Login to the application
