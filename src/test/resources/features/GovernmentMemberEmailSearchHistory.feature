@@ -1,6 +1,6 @@
 Feature: Email search history
 
-  @sortingEmail
+  @Regression @GovernmentMember @Smoke
   Scenario Outline: Validate the sorting order in government email history page
     
     Login to the application
@@ -14,10 +14,10 @@ Feature: Email search history
     And validate the sorting options in government email history table
 
     Examples: 
-      | test_id | sheetName                      |
+      | test_id | sheetName                     |
       |       2 | Govt_Mbr_Text_Mail_Email_Pref |
 
-  @6months
+  @Regression @GovernmentMember
   Scenario Outline: Search previous 1 year button validation in government email history page
     
     Login to the application
@@ -31,10 +31,10 @@ Feature: Email search history
     Then click on back to member information page in government email history page
 
     Examples: 
-      | test_id | sheetName                      |
+      | test_id | sheetName                     |
       |       3 | Govt_Mbr_Text_Mail_Email_Pref |
 
-  @errorEmailhistory
+  @Regression @GovernmentMember @Alert
   Scenario Outline: Error messages validation in government email history search screen.
     
     Login to the application
@@ -47,7 +47,7 @@ Feature: Email search history
     And serach with "<from date>" and "<end date>" then validate the "<error message>" in government email history page
 
     Examples: 
-      | test_id | sheetName                      |
+      | test_id | sheetName                     |
       |       4 | Govt_Mbr_Text_Mail_Email_Pref |
       |       5 | Govt_Mbr_Text_Mail_Email_Pref |
       |       6 | Govt_Mbr_Text_Mail_Email_Pref |
