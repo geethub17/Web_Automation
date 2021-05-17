@@ -251,12 +251,12 @@ public class CommercialMemberEmailSearchHistory extends Utils {
 	/* This method is to validate the search previous 1 year functionality */
 	public void validateSearchPreviousOneYearFunctionality(String error) {
 		clickAnElement(searchPrevious1Year);
-		if (compareTexts(error, getText(noRecordsFound))) {
-			// checking whether first record is present or not. If not then it will go for
-			// next check.
-		} else if (!firstRecordOfHistoryTable.isEmpty()) {
+		if (!firstRecordOfHistoryTable.isEmpty()) {
 			// checking whether error message is displayed or not. If not it will fail the
 			// script.
+		} else if (compareTexts(error, getText(noRecordsFound))) {
+			// checking whether first record is present or not. If not then it will go for
+			// next check.
 		} else {
 			Assert.fail("On clicking search for previos 1 year, either its not displayed 'no records found message'"
 					+ "or search results.");

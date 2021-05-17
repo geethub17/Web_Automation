@@ -1,6 +1,7 @@
 package stepDefinitions;
 
 import io.cucumber.java.en.Then;
+import pageObjects.GovernmentMemberInformationContactInfo;
 
 public class GovernmentMemberInformationContactInfo_sd extends BaseClass {
 
@@ -69,6 +70,14 @@ public class GovernmentMemberInformationContactInfo_sd extends BaseClass {
 	@Then("verify the updated details in phone history table through government member information page")
 	public void verify_the_updated_details_in_phone_history_table_through_government_member_information_page() {
 		governmentMemberInformationContactInfo.verifyThePhoneDetailsInPhoneHistoryPage();
+	}
+	
+	@Then("verify the existing details {string}, {string}, {string}, {string}, {string} in government member phone history page")
+	public void verify_the_existing_details_in_phone_history_page(String string, String string2, String string3,
+			String string4, String string5) {
+		governmentMemberInformationContactInfo.verifyThePhoneDetailsInPhoneHistoryPage(
+				fieldsAndValues.get("phoneNumber"), fieldsAndValues.get("nonSalesValue"),
+				fieldsAndValues.get("updatedBy"), fieldsAndValues.get("updatedDateInPhoneHistory"));
 	}
 
 }

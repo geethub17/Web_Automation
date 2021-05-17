@@ -1,4 +1,4 @@
-Feature: Email search history
+Feature: Government email search history
 
   @Regression @GovernmentMember @Smoke
   Scenario Outline: Validate the sorting order in government email history page
@@ -18,7 +18,7 @@ Feature: Email search history
       |       2 | Govt_Mbr_Text_Mail_Email_Pref |
 
   @Regression @GovernmentMember
-  Scenario Outline: Search previous 1 year button validation in government email history page
+  Scenario Outline: Search previous 6 months button validation in government email history page
     
     Login to the application
 

@@ -50,7 +50,7 @@ Feature: Government member contact information
     And verify the phone number details "<phoneNumber>", "<value1>", "<value2>", "<updatedBy>", "<updatedDate>" in government member contact information page
     Then navigate to government phone history page
     And search for the specific dates "<fromDate>", "<endDate>" in phone history page
-    And verify the existing details "<telephoneNumber>", "<sales>", "<nonSales>", "<updatedBy>", "<updatedDate>" in phone history page
+    And verify the existing details "<telephoneNumber>", "<sales>", "<nonSales>", "<updatedBy>", "<updatedDate>" in government member phone history page 
 
     Examples: 
       | test_id | sheetName                 |

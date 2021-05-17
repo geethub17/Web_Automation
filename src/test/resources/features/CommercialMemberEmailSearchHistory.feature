@@ -1,4 +1,4 @@
-Feature: Email search history
+Feature: Commercial member email search history
 
   @Regression @CommercialMember @Smoke
   Scenario Outline: Validate the sorting order in email history page

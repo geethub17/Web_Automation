@@ -110,7 +110,7 @@ public class PhoneSearchHistory extends Utils {
 	@FindBy(xpath = "//tr[@id='$PpgPhoneSearch$pPhoneHistory$l1']")
 	List<WebElement> firstRecordOfHistoryTable;
 
-	/* This method is to verify the page title of phone search history*/
+	/* This method is to verify the page title of phone search history */
 	public void validatePhoneSearchHistoryPage() {
 		verifyThePageTitle("History Search", historySearchTitle);
 	}
@@ -136,8 +136,7 @@ public class PhoneSearchHistory extends Utils {
 	/* This method is to validate the sorting order */
 	public void validateSortingInHistoryTable() {
 		String oldAttributeValue = isSearchResultsDisplayed.getAttribute("uniqueid");
-		waitTillAttributeValueChanges(isSearchResultsDisplayed, oldAttributeValue,
-				"uniqueid");
+		waitTillAttributeValueChanges(isSearchResultsDisplayed, oldAttributeValue, "uniqueid");
 
 		clickAnElement(telephoneNumberHeader);
 		waitTillSortingFinished(isValuesSorted);
@@ -219,12 +218,12 @@ public class PhoneSearchHistory extends Utils {
 	/* This method is to validate the search previous 3 months functionality */
 	public void validateSearchPreviousThreeMonthsFunctionality(String error) {
 		clickAnElement(searchPrevious3Months);
-		if (compareTexts(error, getText(noRecordsFound))) {
-			// checking whether first record is present or not. If not then it will go for
-			// next check.
-		} else if (!firstRecordOfHistoryTable.isEmpty()) {
+		if (!firstRecordOfHistoryTable.isEmpty()) {
 			// checking whether error message is displayed or not. If not it will fail the
 			// script.
+		} else if (compareTexts(error, getText(noRecordsFound))) {
+			// checking whether first record is present or not. If not then it will go for
+			// next check.
 		} else {
 			Assert.fail("On clicking search for previos 3 months, either its not displayed 'no records found message'"
 					+ "or search results.");
