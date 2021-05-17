@@ -7,7 +7,7 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src\\test\\resources\\features\\PhoneSearch.feature",
+@CucumberOptions(features = "src\\test\\resources\\features",
 								glue = {"stepDefinitions","driver"},
 								dryRun = false,
 								plugin = {"pretty", "html:report/CPSUI_Report.html", 
@@ -15,7 +15,7 @@ import io.cucumber.junit.CucumberOptions;
 										"rerun:target/failedScenarios.txt"},
 								monochrome = true,
 								stepNotifications = true
-								,tags = "@PhoneSearch"
+								,tags = "@Regression"
 								)
 
 public class Runner {

@@ -1,4 +1,4 @@
-Feature: Commercial member preferences
+Feature: Government member preferences
 
   @Regression @GovernmentMember @Update
   Scenario Outline: Updated and validate the member information and staying healthy plans in member preference tab
