@@ -1,7 +1,6 @@
 package stepDefinitions;
 
 import io.cucumber.java.en.Then;
-import pageObjects.GovernmentMemberInformationContactInfo;
 
 public class GovernmentMemberInformationContactInfo_sd extends BaseClass {
 
