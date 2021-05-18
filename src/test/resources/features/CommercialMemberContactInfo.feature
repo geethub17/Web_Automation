@@ -74,6 +74,10 @@ Feature: Commercial member contact information
       | test_id | sheetName                       |
       |       2 | CommercialMemberContactInfPhone |
       |       3 | CommercialMemberContactInfPhone |
+      |       4 | CommercialMemberContactInfPhone |
+      |       5 | CommercialMemberContactInfPhone |
+      |       6 | CommercialMemberContactInfPhone |
+      |       7 | CommercialMemberContactInfPhone |
 
   @Regression @CommercialMember
   Scenario Outline: Validate the member text number details and member mailing address details in commercial member contact information page
