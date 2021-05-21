@@ -132,8 +132,6 @@ public class Driver extends BaseClass {
 		login.clickLogOut();
 		driver.quit();
 	}
-
-	@Before
 	
 	@AfterStep
 	public void takeScreenShotAfterStep(Scenario scenario) throws IOException {

@@ -1,6 +1,6 @@
 Feature: Phone number scrub
 
-  @Regression @PhoneNumberScrub @Update
+  @PhoneNumberScrub @Update
   Scenario Outline: create a scrub file
     
     Login to the application
