@@ -1,6 +1,6 @@
 Feature: Consent or Do not call or Wrong number file page
 
-  @Regression @Update @ConsentOrDncOrWn
+  @Update @ConsentOrDncOrWn
   Scenario Outline: create a consent or do not call or wrong number file
     
     Login to the application
