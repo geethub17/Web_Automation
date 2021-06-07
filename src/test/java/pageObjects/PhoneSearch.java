@@ -120,13 +120,7 @@ public class PhoneSearch extends Utils {
 	 * This method is to validate the error message of invalid phone number search
 	 */
 	public void validateErrorMessage(String expectedMessage) {
-		if (compareTexts(expectedMessage, getText(errorMessage))) {
-			clickAnElement(phoneSearchTextBox);
-			String oldAttributeValue = isSearchResultsDisplayed.getAttribute("uniqueid");
-			clickAnElement(resetInPhoneSearchTextBox);
-			waitTillAttributeValueChanges(isSearchResultsDisplayed, oldAttributeValue, "uniqueid");
-			compareTexts("", phoneSearchTextBox.getAttribute("value"));
-		}
+		compareTexts(expectedMessage, getText(errorMessage));
 	}
 
 	/*

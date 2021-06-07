@@ -230,7 +230,7 @@ public class Utils extends BaseClass {
 	/* This method returns EST today's date in M/dd/yy format. */
 	public String estTodaysDateForEmailHistoryPage() {
 		try {
-			SimpleDateFormat sdf = new SimpleDateFormat("M/dd/yy");
+			SimpleDateFormat sdf = new SimpleDateFormat("M/d/yy");
 			TimeZone zone = TimeZone.getTimeZone("America/New_York");
 			sdf.setTimeZone(zone);
 			return sdf.format(new Date());
