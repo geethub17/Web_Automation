@@ -69,6 +69,7 @@ public class Driver extends BaseClass {
 				InternetExplorerOptions ieOptions = new InternetExplorerOptions();
 				ieOptions.setCapability(InternetExplorerDriver.NATIVE_EVENTS, false);
 				ieOptions.setCapability(InternetExplorerDriver.IGNORE_ZOOM_SETTING, true);
+				ieOptions.setCapability(InternetExplorerDriver.REQUIRE_WINDOW_FOCUS, true);
 
 				/* Initialize and adding IE options to the driver. */
 				driver = new InternetExplorerDriver(ieOptions);
@@ -98,6 +99,7 @@ public class Driver extends BaseClass {
 				InternetExplorerOptions ieOptions = new InternetExplorerOptions();
 				ieOptions.setCapability(InternetExplorerDriver.NATIVE_EVENTS, false);
 				ieOptions.setCapability(InternetExplorerDriver.IGNORE_ZOOM_SETTING, true);
+				ieOptions.setCapability(InternetExplorerDriver.REQUIRE_WINDOW_FOCUS, true);
 
 				/* Adding options to ie capabilities */
 				DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
