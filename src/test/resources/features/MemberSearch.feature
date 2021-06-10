@@ -1,6 +1,6 @@
 Feature: Member search
 
-  @Regression @MemberSearch @Smoke
+  @Regression @MemberSearch @Smoke @conflict
   Scenario Outline: Search the member by using wildcard search
     
     Login to the application
@@ -11,6 +11,7 @@ Feature: Member search
     Then search for the member by using "<firstName>" , "<lastName>" , "<dob>", "<memberState>", "<groupNumber>" and select the "<sourceSystem>"
     And click on search in member search page
     Then click on member last name based on "<seqNumber>", "<firstName>", "<lastName>", "<dob>"
+    dummy
 
     Examples: 
       | test_id | sheetName    |
