@@ -90,7 +90,9 @@ public class ExcelReader extends BaseClass {
 
 						key.setCellType(Cell.CELL_TYPE_STRING);
 
-						if (value.getCellType() == XSSFCell.CELL_TYPE_BLANK || value == null) {
+						if (value == null) {
+							// Not capturing blank cells.
+						} else if (value.getCellType() == XSSFCell.CELL_TYPE_BLANK) {
 							// Not capturing blank cells.
 						} else {
 							value.setCellType(Cell.CELL_TYPE_STRING);

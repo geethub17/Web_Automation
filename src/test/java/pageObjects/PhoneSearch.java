@@ -28,10 +28,10 @@ public class PhoneSearch extends Utils {
 	/*
 	 * All elements of phone search page are captured.
 	 */
-	@FindBy(xpath = "//a[text()='Actions ']")
+	@FindBy(css = "a.StrongWhiteAction")
 	WebElement actions;
 
-	@FindBy(xpath = "//span[text()='Member Search']")
+	@FindBy(css = "ul[id*='pyNavigation']>li:nth-of-type(2)")
 	WebElement memberSearchPage;
 
 	@FindBy(xpath = "//span[text()='Phone Number Scrub']")
@@ -40,7 +40,7 @@ public class PhoneSearch extends Utils {
 	@FindBy(xpath = "//span[text()='Consent/Do Not Call/Wrong Number Upload']")
 	WebElement consentOrDncOrWnFileStatusPage;
 
-	@FindBy(xpath = "//div[text()='Phone Search']")
+	@FindBy(css = "div[class*='heading_1_dataLabelWrite']")
 	WebElement phoneSearchTitle;
 
 	@FindBy(id = "TelephoneNumber")
@@ -55,58 +55,58 @@ public class PhoneSearch extends Utils {
 	@FindBy(xpath = "//td[@data-attribute-name='Telephone Number']//div//span")
 	WebElement telephoneNumberInPhoneSearch;
 
-	@FindBy(xpath = "//select[@id='SalesPrefCode1']//option[@selected]")
+	@FindBy(css = "select[id='SalesPrefCode1']>option")
 	WebElement salesValue;
 
-	@FindBy(xpath = "//select[@id='NonSalesPrefCode1']//option[@selected]")
+	@FindBy(css = "select[id='NonSalesPrefCode1']>option[selected]")
 	WebElement nonSalesValue;
 
-	@FindBy(xpath = "//input[@type='checkbox'][@disabled]")
+	@FindBy(css = "input[id='ReConfirmNonSales1'][disabled]")
 	WebElement disabledCheckBox;
 
-	@FindBy(xpath = "//input[@type='checkbox']")
+	@FindBy(css = "input#ReConfirmNonSales1")
 	WebElement enabledCheckBox;
 
-	@FindBy(xpath = "//td[@data-attribute-name='Federal']//div//span")
+	@FindBy(css = "td[data-attribute-name='Federal']>div>span")
 	WebElement federal;
 
-	@FindBy(xpath = "//td[@data-attribute-name='State']//div//span")
+	@FindBy(css = "td[data-attribute-name='State']>div>span")
 	WebElement state;
 
-	@FindBy(xpath = "//td[@data-attribute-name='Cell']//div//span")
+	@FindBy(css = "td[data-attribute-name='Cell']>div>span")
 	WebElement cell;
 
-	@FindBy(xpath = "//td[@data-attribute-name='Updated By']//div//span")
+	@FindBy(xpath = "//td[@data-attribute-name='Updated By']//span")
 	WebElement updatedByInPhoneSearch;
 
-	@FindBy(xpath = "//td[@data-attribute-name='Updated Date']//div//span")
+	@FindBy(css = "td[data-attribute-name='Updated Date']>div>span")
 	WebElement updatedDate;
 
-	@FindBy(xpath = "//a[text()='Apply']")
+	@FindBy(css = "a[name='UpdateLinks_pgPhoneSearch.NewDetails(1)_1']")
 	WebElement apply;
 
-	@FindBy(xpath = "//a[text()='Reset']")
+	@FindBy(css = "a[name='UpdateLinks_pgPhoneSearch.NewDetails(1)_3']")
 	WebElement resetInActions;
 
-	@FindBy(xpath = "//a[text()='View History']")
+	@FindBy(css = "a[name='UpdateLinks_pgPhoneSearch.NewDetails(1)_5']")
 	WebElement viewHistory;
 
-	@FindBy(xpath = "//span[@id='ERRORMESSAGES_ALL']//ul//li")
+	@FindBy(css = "ul[class='pageErrorList layout-noheader-errors']>li")
 	WebElement errorMessage;
 
-	@FindBy(id = "NonSalesPrefCode1")
+	@FindBy(css = "select[id='NonSalesPrefCode1']")
 	WebElement nonSalesPreferenceDropDown;
 
 	@FindBy(xpath = "//div[@id='modaldialog_con']//div[text()='Yes']")
 	WebElement yesInUpdateDetails;
 
-	@FindBy(xpath = "//div[@class = 'field-item dataLabelWrite privacyalert_dataLabelWrite']")
+	@FindBy(css = "div[class='field-item dataLabelWrite privacyalert_dataLabelWrite']")
 	WebElement privacyAlert;
 
-	@FindBy(xpath = "//div[@data-node-id='TelephoneDetails'][@uniqueid]")
+	@FindBy(css = "div[data-node-id='TelephoneDetails'][uniqueid]")
 	WebElement isPhonePreferenceUpdated;
 
-	@FindBy(xpath = "(//div[@data-node-id='DisplayError']//div[contains(@uniqueid,'SID')])[1]")
+	@FindBy(css = "div[data-node-id='DisplayError']>div[uniqueid*='SID']")
 	WebElement isSearchResultsDisplayed;
 
 	/* This method is to search for a phone number. */

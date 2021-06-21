@@ -135,8 +135,20 @@ public class Utils extends BaseClass {
 			driver.switchTo().activeElement();
 		} catch (org.openqa.selenium.ElementClickInterceptedException e) {
 			/*
-			 * Element will be displayed or enabled when the modal dialog window is opened
-			 * so I am setting the focus to active element
+			 * Sometimes without any exception click action is completing but really it's
+			 * not clicking the element. So in try block, we put a condition to click an
+			 * element if it's still displayed because of that condition, when modal dialog
+			 * window is opened the element is still displayed in on the DOM but not
+			 * clickable so we are switching the focus to active element
+			 */
+			driver.switchTo().activeElement();
+		} catch (org.openqa.selenium.ElementNotInteractableException e) {
+			/*
+			 * Sometimes without any exception click action is completing but really it's
+			 * not clicking the element. So in try block, we put a condition to click an
+			 * element if it's still displayed because of that condition, when modal dialog
+			 * window is opened the element is still displayed in on the DOM but not
+			 * clickable so we are switching the focus to active element
 			 */
 			driver.switchTo().activeElement();
 		} catch (Exception e) {
