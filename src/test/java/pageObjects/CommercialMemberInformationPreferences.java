@@ -150,10 +150,10 @@ public class CommercialMemberInformationPreferences extends Utils {
 	@FindBy(id = "MbrWrittenLanguage")
 	WebElement memberWrittenLanguageDropDown;
 
-	@FindBy(xpath = "//select[@id='MbrSpokenLanguage']//option[@selected]")
+	@FindBy(css = "select[id='MbrSpokenLanguage']>option[selected]")
 	WebElement selectedMemberSpokenLanguage;
 
-	@FindBy(xpath = "//select[@id='MbrWrittenLanguage']//option[@selected]")
+	@FindBy(css = "select[id='MbrWrittenLanguage']>option[selected]")
 	WebElement selectedMemberWrittenLanguage;
 
 	@FindBy(xpath = "//div[text()='Reset']")

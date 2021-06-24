@@ -69,16 +69,16 @@ public class ConsentOrDncOrWnFileStatus extends Utils {
 	@FindBy(xpath = "(//td[@data-attribute-name='File']//div//span)[1]")
 	WebElement latestFileValueInConsentOrDncOrWnTable;
 
-	@FindBy(xpath = "(//td[@data-attribute-name='Submitted By']//div//span)[1]")
+	@FindBy(xpath = "(//td[@data-attribute-name='Submitted By']//span)[1]")
 	WebElement latestSubmittedByValueInConsentOrDncOrWnTable;
 
-	@FindBy(xpath = "(//td[@data-attribute-name='Submitted Date']//div//span)[1]")
+	@FindBy(xpath = "(//td[@data-attribute-name='Submitted Date']//span)[1]")
 	WebElement latestSubmittedDateValueInConsentOrDncOrWnTable;
 
-	@FindBy(xpath = "(//td[@data-attribute-name='Status']//div//span)[1]")
+	@FindBy(xpath = "(//td[@data-attribute-name='Status']//span)[1]")
 	WebElement latestStatusValueInConsentOrDncOrWnTable;
 
-	@FindBy(xpath = "(//td[@data-attribute-name='Status Change Date']//div//span)[1]")
+	@FindBy(xpath = "(//td[@data-attribute-name='Status Change Date']//span)[1]")
 	WebElement latestStatusChangeDateValueInConsentOrDncOrWnTable;
 
 	@FindBy(xpath = "//div[text()='Add Consent/Do Not Call/Wrong Number File']")
@@ -113,7 +113,7 @@ public class ConsentOrDncOrWnFileStatus extends Utils {
 	 * This method is to click on add Consent/Do Not Call/Wrong Number File Status
 	 */
 	public void clickOnAddConsentOrDncOrWnFile() {
-		clickAnElement(addConsentOrDncOrWnFileButton);
+		clickElement(addConsentOrDncOrWnFileButton);
 		createConsentOrDncOrWnFile.validateCreateAConsentOrDncorWnPageTitle();
 	}
 
@@ -136,61 +136,61 @@ public class ConsentOrDncOrWnFileStatus extends Utils {
 	 */
 	public void validateSortingOrderInConsentOrDncOrWnStatusPage() {
 		clickAnElement(fileHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(fileHeader);
 		if (!validateAscendingSortingOrder(fileValuesInConsentOrDncOrWnTable)) {
 			Assert.fail("File values are not sorted in ascending order.");
 		}
 
 		clickAnElement(fileHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(fileHeader);
 		if (!validateDescendingSortingOrder(fileValuesInConsentOrDncOrWnTable)) {
 			Assert.fail("File values are not sorted in descending order.");
 		}
 
 		clickAnElement(submittedByHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(submittedByHeader);
 		if (!validateAscendingSortingOrder(submittedByValuesInConsentOrDncOrWnTable)) {
 			Assert.fail("Submitted by values are not sorted in ascending order.");
 		}
 
 		clickAnElement(submittedByHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(submittedByHeader);
 		if (!validateDescendingSortingOrder(submittedByValuesInConsentOrDncOrWnTable)) {
 			Assert.fail("Submitted by values are not sorted in descending order.");
 		}
 
 		clickAnElement(submittedDateHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(submittedDateHeader);
 		if (!validateAscendingSortingOrder(submittedDateValuesInConsentOrDncOrWnTable)) {
 			Assert.fail("Submitted by date values are not sorted in ascending order.");
 		}
 
 		clickAnElement(submittedDateHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(submittedDateHeader);
 		if (!validateDescendingSortingOrder(submittedDateValuesInConsentOrDncOrWnTable)) {
 			Assert.fail("Submitted by date values are not sorted in descending order.");
 		}
 
 		clickAnElement(statusHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(statusHeader);
 		if (!validateAscendingSortingOrder(statusValuesInConsentOrDncOrWnTable)) {
 			Assert.fail("Status values are not sorted in ascending order.");
 		}
 
 		clickAnElement(statusHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(statusHeader);
 		if (!validateDescendingSortingOrder(statusValuesInConsentOrDncOrWnTable)) {
 			Assert.fail("Status values are not sorted in descending order.");
 		}
 
 		clickAnElement(statusChangeDateHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(statusChangeDateHeader);
 		if (!validateAscendingSortingOrder(statusChangeDateValuesInConsentOrDncOrWnTable)) {
 			Assert.fail("Status change date values are not sorted in ascending order.");
 		}
 
 		clickAnElement(statusChangeDateHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(statusChangeDateHeader);
 		if (!validateDescendingSortingOrder(statusChangeDateValuesInConsentOrDncOrWnTable)) {
 			Assert.fail("Status change date values are not sorted in descending order.");
 		}

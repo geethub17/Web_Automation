@@ -25,22 +25,22 @@ public class PreferenceSearchHistory extends Utils {
 	@FindBy(xpath = "//div[text()='Preference History Search']")
 	WebElement preferenceHistorySearchTitle;
 
-	@FindBy(xpath = "(//td[@data-attribute-name='Contact Channel']//div//span)[1]")
+	@FindBy(xpath = "(//td[@data-attribute-name='Contact Channel']//span)[1]")
 	WebElement latestContactChannelValueInPreferenceHistoryTable;
 
-	@FindBy(xpath = "(//td[@data-attribute-name='Contact Value']//div//span)[1]")
+	@FindBy(xpath = "(//td[@data-attribute-name='Contact Value']//span)[1]")
 	WebElement latestContactValueInPreferenceHistoryTable;
 
-	@FindBy(xpath = "(//td[@data-attribute-name='Source Channel']//div//span)[1]")
+	@FindBy(xpath = "(//td[@data-attribute-name='Source Channel']//span)[1]")
 	WebElement latestSourceChannelInPreferenceHistoryTable;
 
-	@FindBy(xpath = "(//td[@data-attribute-name='Source Origin']//div//span)[1]")
+	@FindBy(xpath = "(//td[@data-attribute-name='Source Origin']//span)[1]")
 	WebElement latestSourceOriginInPreferenceHistoryTable;
 
-	@FindBy(xpath = "(//td[@data-attribute-name='Updated By']//div//span)[1]")
+	@FindBy(xpath = "(//td[@data-attribute-name='Updated By']//span)[1]")
 	WebElement latestUpdatedByInPreferenceHistoryTable;
 
-	@FindBy(xpath = "(//td[@data-attribute-name='Last Updated Date Time Stamp']//div//span)[1]")
+	@FindBy(xpath = "(//td[@data-attribute-name='Last Updated Date Time Stamp']//span)[1]")
 	WebElement latestUpdatedDateAndTimeInPreferenceHistoryTable;
 
 	@FindBy(xpath = "//td[@data-attribute-name='Contact Channel']//div//span")
@@ -79,22 +79,22 @@ public class PreferenceSearchHistory extends Utils {
 	@FindBy(xpath = "//a[text()=' Back To Member Information']")
 	WebElement backToMemberInformation;
 
-	@FindBy(xpath = "//th[@data-attribute-name='Contact Channel']")
+	@FindBy(xpath = "//th[@data-attribute-name='Contact Channel']//div[@class='cellIn ']")
 	WebElement contactChannelHeader;
 
-	@FindBy(xpath = "//th[@data-attribute-name='Contact Value']")
+	@FindBy(xpath = "//th[@data-attribute-name='Contact Value']//div[@class='cellIn ']")
 	WebElement contactValueHeader;
 
-	@FindBy(xpath = "//th[@data-attribute-name='Source Channel']")
+	@FindBy(xpath = "//th[@data-attribute-name='Source Channel']//div[@class='cellIn ']")
 	WebElement sourceChannelHeader;
 
-	@FindBy(xpath = "//th[@data-attribute-name='Updated By']")
+	@FindBy(xpath = "//th[@data-attribute-name='Updated By']//div[@class='cellIn ']")
 	WebElement updatedByHeader;
 
-	@FindBy(xpath = "//th[@data-attribute-name='Source Origin']")
+	@FindBy(xpath = "//th[@data-attribute-name='Source Origin']//div[@class='cellIn ']")
 	WebElement sourceOriginHeader;
 
-	@FindBy(xpath = "//th[@data-attribute-name='Last Updated Date Time Stamp']")
+	@FindBy(xpath = "//th[@data-attribute-name='Last Updated Date Time Stamp']//div[@class='cellIn ']")
 	WebElement lastUpdatedDateTimeHeader;
 
 	@FindBy(xpath = "(//div[@data-node-id='ComPrefHistoryDetails'][contains(@uniqueid,'SID')])[1]")
@@ -152,69 +152,69 @@ public class PreferenceSearchHistory extends Utils {
 		waitTillAttributeValueChanges(isSearchResultsDisplayed, oldAttributeValue, "uniqueid");
 
 		clickAnElement(contactChannelHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(contactChannelHeader);
 		if (!validateAscendingSortingOrder(allContactChannelValuesInPreferenceHistoryTable)) {
 			Assert.fail("Contact channel values are not sorted in ascending order.");
 		}
 
 		clickAnElement(contactChannelHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(contactChannelHeader);
 		if (!validateDescendingSortingOrder(allContactChannelValuesInPreferenceHistoryTable)) {
 			Assert.fail("Contact channel values are not sorted in descending order.");
 		}
 
 		clickAnElement(contactValueHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(contactValueHeader);
 		if (!validateAscendingSortingOrder(allContactValuesInPreferenceHistoryTable)) {
 			Assert.fail("Contact values are not sorted in ascending order.");
 		}
 
 		clickAnElement(contactValueHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(contactValueHeader);
 		if (!validateDescendingSortingOrder(allContactValuesInPreferenceHistoryTable)) {
 			Assert.fail("Contact values are not sorted in descending order.");
 		}
 
 		clickAnElement(sourceChannelHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(sourceChannelHeader);
 		if (!validateAscendingSortingOrder(allSourceChannelInPreferenceHistoryTable)) {
 			Assert.fail("Source channel values are not sorted in ascending order.");
 		}
 		clickAnElement(sourceChannelHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(sourceChannelHeader);
 		if (!validateDescendingSortingOrder(allSourceChannelInPreferenceHistoryTable)) {
 			Assert.fail("Source channel values are not sorted in descending order.");
 		}
 
 		clickAnElement(sourceOriginHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(sourceOriginHeader);
 		if (!validateAscendingSortingOrder(allSourceOriginInPreferenceHistoryTable)) {
 			Assert.fail("Source origin values are not sorted in ascending order.");
 		}
 		clickAnElement(sourceOriginHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(sourceOriginHeader);
 		if (!validateDescendingSortingOrder(allSourceOriginInPreferenceHistoryTable)) {
 			Assert.fail("Source origin values are not sorted in descending order.");
 		}
 
 		clickAnElement(updatedByHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(updatedByHeader);
 		if (!validateAscendingSortingOrder(allUpdatedByInPreferenceHistoryTable)) {
 			Assert.fail("Updated by values are not sorted in ascending order.");
 		}
 		clickAnElement(updatedByHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(updatedByHeader);
 		if (!validateDescendingSortingOrder(allUpdatedByInPreferenceHistoryTable)) {
 			Assert.fail("Updated by values are not sorted in descending order.");
 		}
 
 		clickAnElement(lastUpdatedDateTimeHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(lastUpdatedDateTimeHeader);
 		if (!validateAscendingSortingOrder(allUpdatedDateAndTimeInPreferenceHistoryTable)) {
 			Assert.fail("Updated date and time values are not sorted in ascending order.");
 		}
 		clickAnElement(lastUpdatedDateTimeHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(lastUpdatedDateTimeHeader);
 		if (!validateDescendingSortingOrder(allUpdatedDateAndTimeInPreferenceHistoryTable)) {
 			Assert.fail("Updated date and time values are not sorted in descending order.");
 		}

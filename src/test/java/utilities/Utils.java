@@ -156,6 +156,23 @@ public class Utils extends BaseClass {
 		}
 	}
 
+	/*
+	 * This method is to click element. Already we have a method to click an element
+	 * but while executing in IE browser facing some issues with java script
+	 * executor. So here firstly we will be using click method of webDriver and in
+	 * case of exception then we use java script executor.
+	 */
+	public void clickElement(WebElement element) {
+		try {
+			waitForTheElementToBeClickable(element);
+			element.click();
+		} catch (Exception e) {
+			JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
+			javascriptExecutor.executeScript("arguments[0].click();", element);
+		}
+
+	}
+
 	/* This method captures and returns the text of a web element. */
 	public String getText(WebElement element) {
 		try {
@@ -164,6 +181,9 @@ public class Utils extends BaseClass {
 			javascriptExecutor.executeScript("arguments[0].scrollIntoView(true);", element);
 			String message = element.getText();
 			return message;
+		} catch (org.openqa.selenium.StaleElementReferenceException e) {
+			waitForTheElementToBeVisible(element);
+			return element.getText();
 		} catch (Exception e) {
 			System.out.println("Error at capturing text: " + e);
 		}
@@ -352,7 +372,7 @@ public class Utils extends BaseClass {
 	public boolean waitTillAttributeValueChanges(final WebElement element, final String oldAttributeValue,
 			final String attribute) {
 		try {
-//			System.out.println("Old attribute value is "+ oldAtributeValue);
+//			System.out.println("Old attribute value is "+ oldAttributeValue);
 			wait.until(new ExpectedCondition<Boolean>() {
 				public Boolean apply(WebDriver driver) {
 					String newAttributeValue = element.getAttribute(attribute);
@@ -364,7 +384,7 @@ public class Utils extends BaseClass {
 				}
 			});
 		} catch (org.openqa.selenium.StaleElementReferenceException e) {
-//			System.out.println("Old attribute value in catch block "+ oldAtributeValue);
+//			System.out.println("Old attribute value in catch block "+ oldAttributeValue);
 			wait.until(new ExpectedCondition<Boolean>() {
 
 				public Boolean apply(WebDriver driver) {
@@ -565,4 +585,9 @@ public class Utils extends BaseClass {
 		}
 	}
 
+	/* This method waits till page loads */
+	public void waitTillPageLoads() {
+		wait.until(webDriver -> ((JavascriptExecutor) driver).executeScript("return document.readyState").toString()
+				.equals("complete"));
+	}
 }

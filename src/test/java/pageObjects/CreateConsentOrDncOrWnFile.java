@@ -67,13 +67,13 @@ public class CreateConsentOrDncOrWnFile extends Utils {
 	@FindBy(xpath = "//div[@data-node-id='CreateConsentDNCFile'][contains(@uniqueid,'SID')]")
 	WebElement isDropDownValueChanged;
 
-	@FindBy(xpath = "//select[@id='ConsentCallType']//option[@selected]")
+	@FindBy(css = "select[id='ConsentCallType']>option[selected]")
 	WebElement selectedAnthemCallType;
 
-	@FindBy(xpath = "//select[@id='DataType']//option[@selected]")
+	@FindBy(css = "select[id='DataType']>option[selected]")
 	WebElement selectedDataType;
 
-	@FindBy(xpath = "//select[@id='SourceName']//option[@selected]")
+	@FindBy(css = "select[id='SourceName']>option[selected]")
 	WebElement selectedSourceName;
 
 	@FindBy(xpath = "//div[@data-node-id='ConfirmConsentFileUpload']//div[contains(text(),'STOP')]")
@@ -132,8 +132,8 @@ public class CreateConsentOrDncOrWnFile extends Utils {
 	/* This method is to click on submit */
 	public void clickOnSubmit() {
 		validateCreateAConsentOrDncorWnPageTitle();
-		clickAnElement(submit);
-		clickAnElement(yesinConfirmConsentFileUploadPopUp);
+		clickElement(submit);
+		clickElement(yesinConfirmConsentFileUploadPopUp);
 	}
 
 	/*

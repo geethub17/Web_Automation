@@ -26,16 +26,16 @@ public class PhoneSearchHistory extends Utils {
 	@FindBy(xpath = "//div[text()='History Search']")
 	WebElement historySearchTitle;
 
-	@FindBy(xpath = "(//td[@data-attribute-name='Non-sales']//div//span)[1]")
+	@FindBy(xpath = "(//td[@data-attribute-name='Non-sales']//span)[1]")
 	WebElement latestNonSalesValueInPhoneHistoryTable;
 
-	@FindBy(xpath = "(//td[@data-attribute-name='Telephone Number']//div//span)[1]")
+	@FindBy(xpath = "(//td[@data-attribute-name='Telephone Number']//span)[1]")
 	WebElement latestTelephoneNumberInPhoneHistoryTable;
 
-	@FindBy(xpath = "(//td[@data-attribute-name='Updated By']//div//span)[1]")
+	@FindBy(xpath = "(//td[@data-attribute-name='Updated By']//span)[1]")
 	WebElement latestUpdatedByInPhoneHistoryTable;
 
-	@FindBy(xpath = "(//td[@data-attribute-name='Last Updated Date']//div//span)[1]")
+	@FindBy(xpath = "(//td[@data-attribute-name='Last Updated Date']//span)[1]")
 	WebElement latestLastUpatedDateinPhoneHistoryTable;
 
 	@FindBy(xpath = "//td[@data-attribute-name='Sales']//div//span")
@@ -71,19 +71,19 @@ public class PhoneSearchHistory extends Utils {
 	@FindBy(xpath = "//a[text()=' Back To Phone Search Results']")
 	WebElement backToPhoneSearchResults;
 
-	@FindBy(xpath = "//th[@data-attribute-name='Telephone Number']")
+	@FindBy(xpath = "//th[@data-attribute-name='Telephone Number']//div[@class='cellIn ']")
 	WebElement telephoneNumberHeader;
 
-	@FindBy(xpath = "//th[@data-attribute-name='Sales']")
+	@FindBy(xpath = "//th[@data-attribute-name='Sales']//div[@class='cellIn ']")
 	WebElement salesHeader;
 
-	@FindBy(xpath = "//th[@data-attribute-name='Non-sales']")
+	@FindBy(xpath = "//th[@data-attribute-name='Non-sales']//div[@class='cellIn ']")
 	WebElement nonSalesHeader;
 
-	@FindBy(xpath = "//th[@data-attribute-name='Updated By']")
+	@FindBy(xpath = "//th[@data-attribute-name='Updated By']//div[@class='cellIn ']")
 	WebElement updatedByHeader;
 
-	@FindBy(xpath = "//th[@data-attribute-name='Last Updated Date']")
+	@FindBy(xpath = "//th[@data-attribute-name='Last Updated Date']//div[@class='cellIn ']")
 	WebElement lastUpdatedDateHeader;
 
 	@FindBy(xpath = "(//div[@data-node-id='ViewPhoneHistory']//div[contains(@uniqueid,'SID')])[1]")
@@ -139,58 +139,59 @@ public class PhoneSearchHistory extends Utils {
 		waitTillAttributeValueChanges(isSearchResultsDisplayed, oldAttributeValue, "uniqueid");
 
 		clickAnElement(telephoneNumberHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(telephoneNumberHeader);
 		if (!validateAscendingSortingOrder(allTelephoneNumbersInPhoneHistoryTable)) {
 			Assert.fail("Telephone number are not sorted in ascending order.");
 		}
 
 		clickAnElement(telephoneNumberHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(telephoneNumberHeader);
 		if (!validateDescendingSortingOrder(allTelephoneNumbersInPhoneHistoryTable)) {
 			Assert.fail("Telephone number are not sorted in descending order.");
 		}
 
 		clickAnElement(salesHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(salesHeader);
 		if (!validateAscendingSortingOrder(allSalesValuesInPhoneHistoryTable)) {
 			Assert.fail("Sales values are not sorted in ascending order.");
 		}
 
 		clickAnElement(salesHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(salesHeader);
 		if (!validateDescendingSortingOrder(allSalesValuesInPhoneHistoryTable)) {
 			Assert.fail("Sales values are not sorted in descending order.");
 		}
 
 		clickAnElement(nonSalesHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(nonSalesHeader);
 		if (!validateAscendingSortingOrder(allNonSalesValuesInPhoneHistoryTable)) {
 			Assert.fail("Non sales values are not sorted in ascending order.");
 		}
+		
 		clickAnElement(nonSalesHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(nonSalesHeader);
 		if (!validateDescendingSortingOrder(allNonSalesValuesInPhoneHistoryTable)) {
 			Assert.fail("Non sales values are not sorted in descending order.");
 		}
 
 		clickAnElement(updatedByHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(updatedByHeader);
 		if (!validateAscendingSortingOrder(allUpdatedByInPhoneHistoryTable)) {
 			Assert.fail("Updated by values are not sorted in ascending order.");
 		}
 		clickAnElement(updatedByHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(updatedByHeader);
 		if (!validateDescendingSortingOrder(allUpdatedByInPhoneHistoryTable)) {
 			Assert.fail("Updated by values are not sorted in descending order.");
 		}
 
 		clickAnElement(lastUpdatedDateHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(lastUpdatedDateHeader);
 		if (!validateAscendingSortingOrder(allLastUpatedDatesInPhoneHistoryTable)) {
 			Assert.fail("Last updated by values are not sorted in ascending order.");
 		}
 		clickAnElement(lastUpdatedDateHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(lastUpdatedDateHeader);
 		if (!validateDescendingSortingOrder(allLastUpatedDatesInPhoneHistoryTable)) {
 			Assert.fail("Last updated by values are not sorted in descending order.");
 		}

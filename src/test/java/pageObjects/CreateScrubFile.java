@@ -60,7 +60,7 @@ public class CreateScrubFile extends Utils {
 	@FindBy(xpath = "//div[@data-node-id='CreateScrubFile'][contains(@uniqueid,'SID')]")
 	WebElement isDropDownValueChanged;
 
-	@FindBy(xpath = "//select[@id='CallType']//option[@selected]")
+	@FindBy(css = "select[id='CallType']>option[selected]")
 	WebElement selectedAnthemCallType;
 
 	/* This method is to verify the create a scrub file page title */
@@ -87,13 +87,15 @@ public class CreateScrubFile extends Utils {
 
 	/* This method is to upload the scrub file */
 	public void uploadDocumentToCreateScrubFile(String fileLocation) {
+		System.out.println("File location: "+ System.getProperty("user.dir") + fileLocation);
 		enterTheText(chooseFile, System.getProperty("user.dir") + fileLocation);
+//		chooseFile.sendKeys(Keys.RETURN);
 	}
 
 	/* This method is to click on submit */
 	public void clickOnSubmit() {
 		validateCreateAScrubFilePageTitle();
-		clickAnElement(submit);
+		clickElement(submit);
 	}
 
 	/* This method is to validate the error messages in create scrub file page. */

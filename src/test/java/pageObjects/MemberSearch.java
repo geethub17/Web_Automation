@@ -162,7 +162,9 @@ public class MemberSearch extends Utils {
 		if (groupNumber != null) {
 			enterTheText(this.groupNumber, groupNumber);
 		}
+		if (sourceSystem != null) {
 		selectDropDownValueByText(this.sourceSystem, sourceSystem);
+		}
 		oldAttributeValue = isSearchResultsDisplayed.getAttribute("uniqueid");
 		clickOnSearchInMemberSearch();
 		waitTillAttributeValueChanges(isSearchResultsDisplayed, oldAttributeValue, "uniqueid");
@@ -204,73 +206,73 @@ public class MemberSearch extends Utils {
 	 */
 	public void validateSortingOrderInMemberSearchResultsTable() {
 		clickAnElement(seqNoHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(seqNoHeader);
 		if (!validateAscendingSortingOrder(allSeqNoValuesInSearchResultsTable)) {
 			Assert.fail("Sequence numbers are not sorted in ascending order.");
 		}
 
 		clickAnElement(seqNoHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(seqNoHeader);
 		if (!validateDescendingSortingOrder(allSeqNoValuesInSearchResultsTable)) {
 			Assert.fail("Sequence numbers are not sorted in descending order.");
 		}
 
 		clickAnElement(firstNameHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(firstNameHeader);
 		if (!validateAscendingSortingOrder(allFirstNameValuesInSearchResultsTable)) {
 			Assert.fail("First name values are not sorted in ascending order.");
 		}
 
 		clickAnElement(firstNameHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(firstNameHeader);
 		if (!validateDescendingSortingOrder(allFirstNameValuesInSearchResultsTable)) {
 			Assert.fail("First name values are not sorted in descending order.");
 		}
 
 		clickAnElement(lastNameHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(lastNameHeader);
 		if (!validateAscendingSortingOrder(allLastNameValuesInSearchResultsTable)) {
 			Assert.fail("Last name values are not sorted in ascending order.");
 		}
 
 		clickAnElement(lastNameHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(lastNameHeader);
 		if (!validateDescendingSortingOrder(allLastNameValuesInSearchResultsTable)) {
 			Assert.fail("Last name values are not sorted in descending order.");
 		}
 
 		clickAnElement(dateOfBirthHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(dateOfBirthHeader);
 		if (!validateAscendingSortingOrder(allDateOfBirthValuesInSearchResultsTable)) {
 			Assert.fail("DOB values are not sorted in ascending order.");
 		}
 
 		clickAnElement(dateOfBirthHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(dateOfBirthHeader);
 		if (!validateDescendingSortingOrder(allDateOfBirthValuesInSearchResultsTable)) {
 			Assert.fail("DOB values are not sorted in descending order.");
 		}
 
 		clickAnElement(memberStateHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(memberStateHeader);
 		if (!validateAscendingSortingOrder(allMemberStateValuesInSearchResultsTable)) {
 			Assert.fail("Member state values are not sorted in ascending order.");
 		}
 
 		clickAnElement(memberStateHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(memberStateHeader);
 		if (!validateDescendingSortingOrder(allMemberStateValuesInSearchResultsTable)) {
 			Assert.fail("Member state values are not sorted in descending order.");
 		}
 
 		clickAnElement(sourceSystemHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(sourceSystemHeader);
 		if (!validateAscendingSortingOrder(allSourceSystemValuesInSearchResultsTable)) {
 			Assert.fail("Source system values are not sorted in ascending order.");
 		}
 
 		clickAnElement(sourceSystemHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(sourceSystemHeader);
 		if (!validateDescendingSortingOrder(allSourceSystemValuesInSearchResultsTable)) {
 			Assert.fail("Source system values are not sorted in descending order.");
 		}

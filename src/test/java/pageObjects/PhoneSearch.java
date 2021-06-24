@@ -31,7 +31,7 @@ public class PhoneSearch extends Utils {
 	@FindBy(css = "a.StrongWhiteAction")
 	WebElement actions;
 
-	@FindBy(css = "ul[id*='pyNavigation']>li:nth-of-type(2)")
+	@FindBy(xpath = "//span[text()='Member Search']")
 	WebElement memberSearchPage;
 
 	@FindBy(xpath = "//span[text()='Phone Number Scrub']")
@@ -52,7 +52,7 @@ public class PhoneSearch extends Utils {
 	@FindBy(xpath = "//button[@name='SearchPhone_pgPhoneSearch_16']//div[text()='Reset']")
 	WebElement resetInPhoneSearchTextBox;
 
-	@FindBy(xpath = "//td[@data-attribute-name='Telephone Number']//div//span")
+	@FindBy(xpath = "//td[@data-attribute-name='Telephone Number']//span")
 	WebElement telephoneNumberInPhoneSearch;
 
 	@FindBy(css = "select[id='SalesPrefCode1']>option")
@@ -79,7 +79,7 @@ public class PhoneSearch extends Utils {
 	@FindBy(xpath = "//td[@data-attribute-name='Updated By']//span")
 	WebElement updatedByInPhoneSearch;
 
-	@FindBy(css = "td[data-attribute-name='Updated Date']>div>span")
+	@FindBy(xpath = "//td[@data-attribute-name='Updated Date']//span")
 	WebElement updatedDate;
 
 	@FindBy(css = "a[name='UpdateLinks_pgPhoneSearch.NewDetails(1)_1']")

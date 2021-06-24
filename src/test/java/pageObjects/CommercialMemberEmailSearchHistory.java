@@ -25,25 +25,25 @@ public class CommercialMemberEmailSearchHistory extends Utils {
 	@FindBy(xpath = "//div[text()='Email History Search']")
 	WebElement emailHistorySearchTitle;
 
-	@FindBy(xpath = "(//td[@data-attribute-name='<b>Preferred</b>']//div//span)[1]")
+	@FindBy(xpath = "(//td[@data-attribute-name='<b>Preferred</b>']//span)[1]")
 	WebElement latestPreferredValueInEmailHistoryTable;
 
-	@FindBy(xpath = "(//td[@data-attribute-name='<b>Email Address</b>']//div//span)[1]")
+	@FindBy(xpath = "(//td[@data-attribute-name='<b>Email Address</b>']//span)[1]")
 	WebElement latestEmailAddressInEmailHistoryTable;
 
-	@FindBy(xpath = "(//td[@data-attribute-name='<b>Email Status</b>']//div//span)[1]")
+	@FindBy(xpath = "(//td[@data-attribute-name='<b>Email Status</b>']//span)[1]")
 	WebElement latestEmailStatusInEmailHistoryTable;
 
-	@FindBy(xpath = "(//td[@data-attribute-name='<b>Source Channel</b>']//div//span)[1]")
+	@FindBy(xpath = "(//td[@data-attribute-name='<b>Source Channel</b>']//span)[1]")
 	WebElement latestSourceChannelInEmailHistoryTable;
 
-	@FindBy(xpath = "(//td[@data-attribute-name='<b>Source Origin</b>']//div//span)[1]")
+	@FindBy(xpath = "(//td[@data-attribute-name='<b>Source Origin</b>']//span)[1]")
 	WebElement latestSourceOriginInEmailHistoryTable;
 
-	@FindBy(xpath = "(//td[@data-attribute-name='<b>Updated By</b>']//div//span)[1]")
+	@FindBy(xpath = "(//td[@data-attribute-name='<b>Updated By</b>']//span)[1]")
 	WebElement latestUpdatedByInEmailHistoryTable;
 
-	@FindBy(xpath = "(//td[@data-attribute-name='<b>Last Updated Date Time Stamp</b>']//div//span)[1]")
+	@FindBy(xpath = "(//td[@data-attribute-name='<b>Last Updated Date Time Stamp</b>']//span)[1]")
 	WebElement latestUpdatedDateAndTimeInEmailHistoryTable;
 
 	@FindBy(xpath = "//td[@data-attribute-name='<b>Preferred</b>']//div//span")
@@ -88,22 +88,22 @@ public class CommercialMemberEmailSearchHistory extends Utils {
 	@FindBy(xpath = "//th[@data-attribute-name='<b>Preferred</b>']")
 	WebElement preferredHeader;
 
-	@FindBy(xpath = "//th[@data-attribute-name='<b>Email Address</b>']")
+	@FindBy(xpath = "//th[@data-attribute-name='<b>Email Address</b>']//div[@class='cellIn ']")
 	WebElement emailAddressHeader;
 
-	@FindBy(xpath = "//th[@data-attribute-name='<b>Email Status</b>']")
+	@FindBy(xpath = "//th[@data-attribute-name='<b>Email Status</b>']//div[@class='cellIn ']")
 	WebElement emailStatusHeader;
 
-	@FindBy(xpath = "//th[@data-attribute-name='<b>Source Channel</b>']")
+	@FindBy(xpath = "//th[@data-attribute-name='<b>Source Channel</b>']//div[@class='cellIn ']")
 	WebElement sourceChannelHeader;
 
-	@FindBy(xpath = "//th[@data-attribute-name='<b>Updated By</b>']")
+	@FindBy(xpath = "//th[@data-attribute-name='<b>Updated By</b>']//div[@class='cellIn ']")
 	WebElement updatedByHeader;
 
-	@FindBy(xpath = "//th[@data-attribute-name='<b>Source Origin</b>']")
+	@FindBy(xpath = "//th[@data-attribute-name='<b>Source Origin</b>']//div[@class='cellIn ']")
 	WebElement sourceOriginHeader;
 
-	@FindBy(xpath = "//th[@data-attribute-name='<b>Last Updated Date Time Stamp</b>']")
+	@FindBy(xpath = "//th[@data-attribute-name='<b>Last Updated Date Time Stamp</b>']//div[@class='cellIn ']")
 	WebElement lastUpdatedDateTimeHeader;
 
 	@FindBy(xpath = "(//div[@data-node-id='CommercialHistoryDetails'][contains(@uniqueid,'SID')])[1]")
@@ -173,57 +173,57 @@ public class CommercialMemberEmailSearchHistory extends Utils {
 		waitTillAttributeValueChanges(isSearchResultsDisplayed, oldAttributeValue, "uniqueid");
 
 		clickAnElement(emailAddressHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(emailAddressHeader);
 		if (!validateAscendingSortingOrder(allEmailAddressInEmailHistoryTable)) {
 			Assert.fail("Email addresses are not sorted in ascending order.");
 		}
 
 		clickAnElement(emailAddressHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(emailAddressHeader);
 		if (!validateDescendingSortingOrder(allEmailAddressInEmailHistoryTable)) {
 			Assert.fail("Email addresses are not sorted in descending order.");
 		}
 
 		clickAnElement(sourceChannelHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(sourceChannelHeader);
 		if (!validateAscendingSortingOrder(allSourceChannelInEmailHistoryTable)) {
 			Assert.fail("Source channel values are not sorted in ascending order.");
 		}
 		clickAnElement(sourceChannelHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(sourceChannelHeader);
 		if (!validateDescendingSortingOrder(allSourceChannelInEmailHistoryTable)) {
 			Assert.fail("Source channel values are not sorted in descending order.");
 		}
 
 		clickAnElement(sourceOriginHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(sourceOriginHeader);
 		if (!validateAscendingSortingOrder(allSourceOriginInEmailHistoryTable)) {
 			Assert.fail("Source origin values are not sorted in ascending order.");
 		}
 		clickAnElement(sourceOriginHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(sourceOriginHeader);
 		if (!validateDescendingSortingOrder(allSourceOriginInEmailHistoryTable)) {
 			Assert.fail("Source origin values are not sorted in descending order.");
 		}
 
 		clickAnElement(updatedByHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(updatedByHeader);
 		if (!validateAscendingSortingOrder(allUpdatedByInEmailHistoryTable)) {
 			Assert.fail("Updated by values are not sorted in ascending order.");
 		}
 		clickAnElement(updatedByHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(updatedByHeader);
 		if (!validateDescendingSortingOrder(allUpdatedByInEmailHistoryTable)) {
 			Assert.fail("Updated by values are not sorted in descending order.");
 		}
 
 		clickAnElement(lastUpdatedDateTimeHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(lastUpdatedDateTimeHeader);
 		if (!validateAscendingSortingOrder(allUpdatedDateAndTimeInEmailHistoryTable)) {
 			Assert.fail("Updated date and time values are not sorted in ascending order.");
 		}
 		clickAnElement(lastUpdatedDateTimeHeader);
-		waitTillSortingFinished(isValuesSorted);
+		waitForTheElementToBeClickable(lastUpdatedDateTimeHeader);
 		if (!validateDescendingSortingOrder(allUpdatedDateAndTimeInEmailHistoryTable)) {
 			Assert.fail("Updated date and time values are not sorted in descending order.");
 		}
@@ -265,7 +265,7 @@ public class CommercialMemberEmailSearchHistory extends Utils {
 
 	/* This method is to navigate back to member information screen */
 	public void backToMemberContactInformationPage() {
-		clickAnElement(backToMemberInformation);
+		clickElement(backToMemberInformation);
 		verifyThePageTitle("Member Information", commercialMemberInformationContactInfo.memberInformationTitle);
 	}
 

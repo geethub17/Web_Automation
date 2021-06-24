@@ -68,85 +68,85 @@ public class GovernmentMemberInformationContactInfo extends Utils {
 	@FindBy(xpath = "(//label[@for='PreferredText']//following::div//span)[1]")
 	WebElement preferredTextInMemberInformationSection;
 	//
-	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pEmailList$l1']//td[@data-attribute-name='<b>Type</b>']//div//span")
+	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pEmailList$l1']//td[@data-attribute-name='<b>Type</b>']//span")
 	WebElement primaryTypeInMemberEmailSection;
 
-	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pEmailList$l1']//td[@data-attribute-name='<b>Manual Confirmation</b>']//div//span")
+	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pEmailList$l1']//td[@data-attribute-name='<b>Manual Confirmation</b>']//span")
 	WebElement primaryManulConfirmationInMemberEmailSection;
 
-	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pEmailList$l1']//td[@data-attribute-name='<b>Email Address</b>']//div//span//input")
+	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pEmailList$l1']//td[@data-attribute-name='<b>Email Address</b>']//span//input")
 	WebElement primaryEmailAddressInMemberEmailSection;
 
-	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pEmailList$l1']//td[@data-attribute-name='<b>Updated By</b>']//div")
+	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pEmailList$l1']//td[@data-attribute-name='<b>Updated By</b>']")
 	WebElement primaryUpdatedByInMemberEmailSection;
 
-	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pEmailList$l1']//td[@data-attribute-name='<b>Updated Date Time Stamp</b>']//div")
+	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pEmailList$l1']//td[@data-attribute-name='<b>Updated Date Time Stamp</b>']")
 	WebElement primaryUpdatedDateTimeStampInMemberEmailSection;
 
-	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pEmailList$l1']//td[@data-attribute-name='<b>Source Channel</b>']//div//span")
+	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pEmailList$l1']//td[@data-attribute-name='<b>Source Channel</b>']//span")
 	WebElement primarySourceChannelInMemberEmailSection;
 
-	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pEmailList$l1']//td[@data-attribute-name='<b>Source Origin</b>']//div//span")
+	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pEmailList$l1']//td[@data-attribute-name='<b>Source Origin</b>']//span")
 	WebElement primarySourceOriginInMemberEmailSection;
 
-	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pEmailList$l2']//td[@data-attribute-name='<b>Type</b>']//div//span")
+	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pEmailList$l2']//td[@data-attribute-name='<b>Type</b>']//span")
 	WebElement alternate1TypeInMemberEmailSection;
 
-	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pEmailList$l2']//td[@data-attribute-name='<b>Manual Confirmation</b>']//div//span")
+	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pEmailList$l2']//td[@data-attribute-name='<b>Manual Confirmation</b>']//span")
 	WebElement alternate1ManulConfirmationInMemberEmailSection;
 
-	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pEmailList$l2']//td[@data-attribute-name='<b>Email Address</b>']//div//span")
+	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pEmailList$l2']//td[@data-attribute-name='<b>Email Address</b>']//span")
 	WebElement alternate1EmailAddressInMemberEmailSection;
 
-	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pEmailList$l2']//td[@data-attribute-name='<b>Updated By</b>']//div//span")
+	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pEmailList$l2']//td[@data-attribute-name='<b>Updated By</b>']//span")
 	WebElement alternate1UpdatedByInMemberEmailSection;
 
-	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pEmailList$l2']//td[@data-attribute-name='<b>Updated Date Time Stamp</b>']//div//span")
+	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pEmailList$l2']//td[@data-attribute-name='<b>Updated Date Time Stamp</b>']//span")
 	WebElement alternate1UpdatedDateTimeStampInMemberEmailSection;
 
-	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pEmailList$l2']//td[@data-attribute-name='<b>Source Channel</b>']//div//span")
+	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pEmailList$l2']//td[@data-attribute-name='<b>Source Channel</b>']//span")
 	WebElement alternate1SourceChannelInMemberEmailSection;
 
-	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pEmailList$l2']//td[@data-attribute-name='<b>Source Origin</b>']//div//span")
+	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pEmailList$l2']//td[@data-attribute-name='<b>Source Origin</b>']//span")
 	WebElement alternate1SourceOriginInMemberEmailSection;
 
-	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pEmailList$l3']//td[@data-attribute-name='<b>Type</b>']//div//span")
+	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pEmailList$l3']//td[@data-attribute-name='<b>Type</b>']//span")
 	WebElement alternate2TypeInMemberEmailSection;
 
-	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pEmailList$l3']//td[@data-attribute-name='<b>Manual Confirmation</b>']//div//span")
+	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pEmailList$l3']//td[@data-attribute-name='<b>Manual Confirmation</b>']//span")
 	WebElement alternate2ManulConfirmationInMemberEmailSection;
 
-	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pEmailList$l3']//td[@data-attribute-name='<b>Email Address</b>']//div//span")
+	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pEmailList$l3']//td[@data-attribute-name='<b>Email Address</b>']//span")
 	WebElement alternate2EmailAddressInMemberEmailSection;
 
-	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pEmailList$l3']//td[@data-attribute-name='<b>Updated By</b>']//div//span")
+	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pEmailList$l3']//td[@data-attribute-name='<b>Updated By</b>']//span")
 	WebElement alternate2UpdatedByInMemberEmailSection;
 
-	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pEmailList$l3']//td[@data-attribute-name='<b>Updated Date Time Stamp</b>']//div//span")
+	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pEmailList$l3']//td[@data-attribute-name='<b>Updated Date Time Stamp</b>']//span")
 	WebElement alternate2UpdatedDateTimeStampInMemberEmailSection;
 
-	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pEmailList$l3']//td[@data-attribute-name='<b>Source Channel</b>']//div//span")
+	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pEmailList$l3']//td[@data-attribute-name='<b>Source Channel</b>']//span")
 	WebElement alternate2SourceChannelInMemberEmailSection;
 
-	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pEmailList$l3']//td[@data-attribute-name='<b>Source Origin</b>']//div//span")
+	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pEmailList$l3']//td[@data-attribute-name='<b>Source Origin</b>']//span")
 	WebElement alternate2SourceOriginInMemberEmailSection;
 
-	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pTextNumberList$l1']//td[@data-attribute-name='Preferred']//div//span")
+	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pTextNumberList$l1']//td[@data-attribute-name='Preferred']//span")
 	WebElement preferredInMemberTextNumberSection;
 
-	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pTextNumberList$l1']//td[@data-attribute-name='Phone Number']//div//span")
+	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pTextNumberList$l1']//td[@data-attribute-name='Phone Number']//span")
 	WebElement phoneNumberInMemberTextNumberSection;
 
-	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pTextNumberList$l1']//td[@data-attribute-name='Source Channel']//div//span")
+	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pTextNumberList$l1']//td[@data-attribute-name='Source Channel']//span")
 	WebElement sourceChannelInMemberTextNumberSection;
 
-	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pTextNumberList$l1']//td[@data-attribute-name='Source Origin']//div//span")
+	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pTextNumberList$l1']//td[@data-attribute-name='Source Origin']//span")
 	WebElement sourceOriginInMemberTextNumberSection;
 
-	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pTextNumberList$l1']//td[@data-attribute-name='Updated By']//div//span")
+	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pTextNumberList$l1']//td[@data-attribute-name='Updated By']//span")
 	WebElement updatedByInMemberTextNumberSection;
 
-	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pTextNumberList$l1']//td[@data-attribute-name='Updated Date']//div//span")
+	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pTextNumberList$l1']//td[@data-attribute-name='Updated Date']//span")
 	WebElement updatedDateInMemberTextNumberSection;
 
 	@FindBy(xpath = "//a[text()='Mark Preferred']")
@@ -197,13 +197,13 @@ public class GovernmentMemberInformationContactInfo extends Utils {
 	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pEmailList$l3']//a[text()='View History']")
 	WebElement viewHistoryInAlternate2EmailSection;
 
-	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pMemberPhoneDetails$l1']//td[@data-attribute-name='Telephone Number']//div//span")
+	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pMemberPhoneDetails$l1']//td[@data-attribute-name='Telephone Number']//span")
 	WebElement telephoneNumberInMemberTelephoneSection;
 
-	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pMemberPhoneDetails$l1']//select[@id='SalesPrefCode1']//option[@selected]")
+	@FindBy(css = "select[id='SalesPrefCode1']>option[selected]")
 	WebElement salesValueInMemberTelephoneSection;
 
-	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pMemberPhoneDetails$l1']//select[@id='NonSalesPrefCode1']//option[@selected]")
+	@FindBy(css = "select[id='NonSalesPrefCode1']>option[selected]")
 	WebElement nonSalesValueInMemberTelephoneSection;
 
 	@FindBy(xpath = "//input[@type='checkbox']")
@@ -212,19 +212,19 @@ public class GovernmentMemberInformationContactInfo extends Utils {
 	@FindBy(xpath = "//input[@type='checkbox'][@disabled]")
 	WebElement disabledCheckBox;
 
-	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pMemberPhoneDetails$l1']//td[@data-attribute-name='Federal']//div//span")
+	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pMemberPhoneDetails$l1']//td[@data-attribute-name='Federal']//span")
 	WebElement federalInMemberTelephoneSection;
 
-	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pMemberPhoneDetails$l1']//td[@data-attribute-name='State']//div//span")
+	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pMemberPhoneDetails$l1']//td[@data-attribute-name='State']//span")
 	WebElement stateInMemberTelephoneSection;
 
-	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pMemberPhoneDetails$l1']//td[@data-attribute-name='Cell']//div//span")
+	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pMemberPhoneDetails$l1']//td[@data-attribute-name='Cell']//span")
 	WebElement cellInMemberTelephoneSection;
 
-	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pMemberPhoneDetails$l1']//td[@data-attribute-name='Updated By']//div//span")
+	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pMemberPhoneDetails$l1']//td[@data-attribute-name='Updated By']//span")
 	WebElement updatedByInMemberTelephoneSection;
 
-	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pMemberPhoneDetails$l1']//td[@data-attribute-name='Updated Date']//div//span")
+	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pMemberPhoneDetails$l1']//td[@data-attribute-name='Updated Date']//span")
 	WebElement updatedDateInMemberTelephoneSection;
 
 	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pMemberDetails$pMemberPhoneDetails$l1']//a[text()='Apply']")
