@@ -26,7 +26,7 @@ public class ScrubbingStatus extends Utils {
 	 * All elements of scrubbing status page are captured.
 	 */
 
-	@FindBy(xpath = "//span[text()='Scrubbing Status']")
+	@FindBy(xpath = "//h2[text()='Scrubbing Status']")
 	WebElement scrubbingStatusPageTitle;
 
 	@FindBy(xpath = "//th[@data-attribute-name='File']//div[@class='cellIn ']")

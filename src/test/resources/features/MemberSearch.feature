@@ -71,4 +71,4 @@ Feature: Member search
     Given Navigate to member search page
     And select search by subscriber id option
     And click on search in member search page
-    And validate the error message "** Subscriber ID - This field is required." in member search page
+    And validate the error message "Subscriber ID - This field is required." in member search page
