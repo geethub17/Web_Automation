@@ -58,10 +58,10 @@ Feature: Member search
 
     Given Navigate to member search page
     And click on search in member search page
-    And validate the error message "** First Name - This field is required." in member search page
-    And validate the error message "** First Name - Length must be between 3 and 15 characters long." in member search page
-    And validate the error message "** Last Name - This field is required." in member search page
-    And validate the error message "** Last Name - Length must be between 3 and 15 characters long." in member search page
+    And validate the error message "First Name - This field is required." in member search page
+    And validate the error message "First Name - Length must be between 3 and 15 characters long." in member search page
+    And validate the error message "Last Name - This field is required." in member search page
+    And validate the error message "Last Name - Length must be between 3 and 15 characters long." in member search page
 
   @Regression @MemberSearch @Alert
   Scenario: Validate the error messages for member name search

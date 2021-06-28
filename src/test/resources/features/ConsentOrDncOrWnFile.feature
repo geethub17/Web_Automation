@@ -65,7 +65,7 @@ Feature: Consent or Do not call or Wrong number file page
     And select header details by using "<Anthem call type>", "<Data type>" and "<Source name>"
     Then upload the "<Document>" in create a consent or do not call or wrong number file page
     And click on submit in create consent or do not call or wrong number file  page
-    Then verify the message "ERROR. Please contact "TCPAComplianceHelpDesk@Anthem.com” to process your file." in create a consent or do not call or wrong number file page
+    Then verify the message "Please select the file to upload" in create a consent or do not call or wrong number file page
 
     Examples: 
       | test_id | sheetName        |

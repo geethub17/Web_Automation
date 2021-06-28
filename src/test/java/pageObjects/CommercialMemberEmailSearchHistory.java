@@ -25,52 +25,52 @@ public class CommercialMemberEmailSearchHistory extends Utils {
 	@FindBy(xpath = "//div[text()='Email History Search']")
 	WebElement emailHistorySearchTitle;
 
-	@FindBy(xpath = "(//td[@data-attribute-name='<b>Preferred</b>']//span)[1]")
+	@FindBy(xpath = "(//td[contains(@data-attribute-name,'Preferred')]//span)[1]")
 	WebElement latestPreferredValueInEmailHistoryTable;
 
-	@FindBy(xpath = "(//td[@data-attribute-name='<b>Email Address</b>']//span)[1]")
+	@FindBy(xpath = "(//td[contains(@data-attribute-name,'Email Address')]//span)[1]")
 	WebElement latestEmailAddressInEmailHistoryTable;
 
-	@FindBy(xpath = "(//td[@data-attribute-name='<b>Email Status</b>']//span)[1]")
+	@FindBy(xpath = "(//td[contains(@data-attribute-name,'Email Status')]//span)[1]")
 	WebElement latestEmailStatusInEmailHistoryTable;
 
-	@FindBy(xpath = "(//td[@data-attribute-name='<b>Source Channel</b>']//span)[1]")
+	@FindBy(xpath = "(//td[contains(@data-attribute-name,'Source Channel')]//span)[1]")
 	WebElement latestSourceChannelInEmailHistoryTable;
 
-	@FindBy(xpath = "(//td[@data-attribute-name='<b>Source Origin</b>']//span)[1]")
+	@FindBy(xpath = "(//td[contains(@data-attribute-name,'Source Origin')]//span)[1]")
 	WebElement latestSourceOriginInEmailHistoryTable;
 
-	@FindBy(xpath = "(//td[@data-attribute-name='<b>Updated By</b>']//span)[1]")
+	@FindBy(xpath = "(//td[contains(@data-attribute-name,'Updated By')]//span)[1]")
 	WebElement latestUpdatedByInEmailHistoryTable;
 
-	@FindBy(xpath = "(//td[@data-attribute-name='<b>Last Updated Date Time Stamp</b>']//span)[1]")
+	@FindBy(xpath = "(//td[contains(@data-attribute-name,'Last Updated Date Time Stamp')]//span)[1]")
 	WebElement latestUpdatedDateAndTimeInEmailHistoryTable;
 
-	@FindBy(xpath = "//td[@data-attribute-name='<b>Preferred</b>']//div//span")
+	@FindBy(xpath = "//td[contains(@data-attribute-name,'Preferred')]//div//span")
 	List<WebElement> allPreferredValueInEmailHistoryTable;
 
-	@FindBy(xpath = "//td[@data-attribute-name='<b>Email Address</b>']//div//span")
+	@FindBy(xpath = "//td[contains(@data-attribute-name,'Email Address')]//div//span")
 	List<WebElement> allEmailAddressInEmailHistoryTable;
 
-	@FindBy(xpath = "//td[@data-attribute-name='<b>Email Status</b>']//div//span")
+	@FindBy(xpath = "//td[contains(@data-attribute-name,'Email Status')]//div//span")
 	List<WebElement> allEmailStatusInEmailHistoryTable;
 
-	@FindBy(xpath = "//td[@data-attribute-name='<b>Source Channel</b>']//div//span")
+	@FindBy(xpath = "//td[contains(@data-attribute-name,'Source Channel')]//div//span")
 	List<WebElement> allSourceChannelInEmailHistoryTable;
 
-	@FindBy(xpath = "//td[@data-attribute-name='<b>Source Origin</b>']//div//span")
+	@FindBy(xpath = "//td[contains(@data-attribute-name,'Source Origin')]//div//span")
 	List<WebElement> allSourceOriginInEmailHistoryTable;
 
-	@FindBy(xpath = "//td[@data-attribute-name='<b>Updated By</b>']//div//span")
+	@FindBy(xpath = "//td[contains(@data-attribute-name,'Updated By')]//div//span")
 	List<WebElement> allUpdatedByInEmailHistoryTable;
 
-	@FindBy(xpath = "//td[@data-attribute-name='<b>Last Updated Date Time Stamp</b>']//div//span")
+	@FindBy(xpath = "//td[contains(@data-attribute-name,'Last Updated Date Time Stamp')]//div//span")
 	List<WebElement> allUpdatedDateAndTimeInEmailHistoryTable;
 
-	@FindBy(id = "FromDate")
+	@FindBy(name = "$PpyWorkPage$pHistoryDetails$pFromDate")
 	WebElement fromDate;
 
-	@FindBy(id = "EmailHistoryEndDate")
+	@FindBy(name = "$PpyWorkPage$pHistoryDetails$pEmailHistoryEndDate")
 	WebElement endDate;
 
 	@FindBy(xpath = "//div[text()='Search']")
@@ -82,28 +82,28 @@ public class CommercialMemberEmailSearchHistory extends Utils {
 	@FindBy(xpath = "//div[text()='Cancel']")
 	WebElement cancelnEmailHistory;
 
-	@FindBy(xpath = "//a[text()=' Back To Member Information']")
+	@FindBy(xpath = "//a[text()='Back To Member Information']")
 	WebElement backToMemberInformation;
 
-	@FindBy(xpath = "//th[@data-attribute-name='<b>Preferred</b>']")
+	@FindBy(xpath = "//th[contains(@data-attribute-name='Preferred')]")
 	WebElement preferredHeader;
 
-	@FindBy(xpath = "//th[@data-attribute-name='<b>Email Address</b>']//div[@class='cellIn ']")
+	@FindBy(xpath = "//th[contains(@data-attribute-name='Email Address')]//div[@class='cellIn ']")
 	WebElement emailAddressHeader;
 
-	@FindBy(xpath = "//th[@data-attribute-name='<b>Email Status</b>']//div[@class='cellIn ']")
+	@FindBy(xpath = "//th[contains(@data-attribute-name='Email Status')]//div[@class='cellIn ']")
 	WebElement emailStatusHeader;
 
-	@FindBy(xpath = "//th[@data-attribute-name='<b>Source Channel</b>']//div[@class='cellIn ']")
+	@FindBy(xpath = "//th[contains(@data-attribute-name='Source Channel')]//div[@class='cellIn ']")
 	WebElement sourceChannelHeader;
 
-	@FindBy(xpath = "//th[@data-attribute-name='<b>Updated By</b>']//div[@class='cellIn ']")
+	@FindBy(xpath = "//th[contains(@data-attribute-name='Updated By')]//div[@class='cellIn ']")
 	WebElement updatedByHeader;
 
-	@FindBy(xpath = "//th[@data-attribute-name='<b>Source Origin</b>']//div[@class='cellIn ']")
+	@FindBy(xpath = "//th[contains(@data-attribute-name='Source Origin')]//div[@class='cellIn ']")
 	WebElement sourceOriginHeader;
 
-	@FindBy(xpath = "//th[@data-attribute-name='<b>Last Updated Date Time Stamp</b>']//div[@class='cellIn ']")
+	@FindBy(xpath = "//th[contains(@data-attribute-name='Last Updated Date Time Stamp')]//div[@class='cellIn ']")
 	WebElement lastUpdatedDateTimeHeader;
 
 	@FindBy(xpath = "(//div[@data-node-id='CommercialHistoryDetails'][contains(@uniqueid,'SID')])[1]")
@@ -112,16 +112,16 @@ public class CommercialMemberEmailSearchHistory extends Utils {
 	@FindBy(xpath = "//div[@datasource='pyWorkPage.HistoryDetails.EmailList_CommercialHistoryDetails_1'][contains(@id,'PEGA_GRID')]")
 	WebElement isValuesSorted;
 
-	@FindBy(xpath = "//li[text()='History Details:Please enter From Date and End Date within 1 year range.']")
+	@FindBy(xpath = "//span[@id='ERRORMESSAGES_ALL']//ul/li")
 	WebElement moreThan1Year;
 
-	@FindBy(xpath = "//span[text()='From Date must not be greater than current date.']")
+	@FindBy(xpath = "//div[@id='$PpyWorkPage$pHistoryDetails$pFromDateError']//span[1]")
 	WebElement fromDateMustNotBeGreaterThanCurrentDate;
 
-	@FindBy(xpath = "//span[text()='The From Date must come before the End Date.']")
+	@FindBy(xpath = "//div[@id='$PpyWorkPage$pHistoryDetails$pFromDateError']//span")
 	WebElement fromDateMustComeBeforeEndDate;
 
-	@FindBy(xpath = "//span[text()='End Date must not be greater than current date']")
+	@FindBy(xpath = "//div[@id='$PpyWorkPage$pHistoryDetails$pEmailHistoryEndDateError']//span")
 	WebElement endDateMustNotBeGreaterThanCurrentDate;
 
 	@FindBy(xpath = "//div[text()='* No records found']")

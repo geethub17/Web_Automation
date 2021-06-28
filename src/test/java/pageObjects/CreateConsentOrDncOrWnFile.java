@@ -22,22 +22,22 @@ public class CreateConsentOrDncOrWnFile extends Utils {
 	 * captured.
 	 */
 
-	@FindBy(xpath = "//span[text()='Create Consent/Do Not Call/Wrong Number File']")
+	@FindBy(xpath = "//h2[text()='Create Consent/Do Not Call/Wrong Number File']")
 	WebElement createAConsentOrDncOrWnFilePageTitle;
 
-	@FindBy(id = "DataType")
+	@FindBy(name = "$PpyWorkPage$pFileHeaderDetails$pDataType")
 	WebElement dataTypeDropDown;
 
-	@FindBy(id = "ConsentCallType")
+	@FindBy(name = "$PpyWorkPage$pFileHeaderDetails$pConsentCallType")
 	WebElement anthemCallTypeDropDown;
 
-	@FindBy(id = "SourceName")
+	@FindBy(name = "$PpyWorkPage$pFileHeaderDetails$pSourceName")
 	WebElement sourceNameDropDown;
 
 	@FindBy(id = "$PpyWorkPage$ppyFileName")
 	WebElement chooseFile;
 
-	@FindBy(xpath = "(//div[text()='Cancel'])[2]")
+	@FindBy(xpath = "//div[text()='Cancel']")
 	WebElement cancel;
 
 	@FindBy(xpath = "//div[text()='Reset']")
@@ -67,13 +67,13 @@ public class CreateConsentOrDncOrWnFile extends Utils {
 	@FindBy(xpath = "//div[@data-node-id='CreateConsentDNCFile'][contains(@uniqueid,'SID')]")
 	WebElement isDropDownValueChanged;
 
-	@FindBy(css = "select[id='ConsentCallType']>option[selected]")
+	@FindBy(css = "select[name='$PpyWorkPage$pFileHeaderDetails$pConsentCallType']>option[selected]")
 	WebElement selectedAnthemCallType;
 
-	@FindBy(css = "select[id='DataType']>option[selected]")
+	@FindBy(css = "select[name='$PpyWorkPage$pFileHeaderDetails$pDataType']>option[selected]")
 	WebElement selectedDataType;
 
-	@FindBy(css = "select[id='SourceName']>option[selected]")
+	@FindBy(css = "select[name='$PpyWorkPage$pFileHeaderDetails$pSourceName']>option[selected]")
 	WebElement selectedSourceName;
 
 	@FindBy(xpath = "//div[@data-node-id='ConfirmConsentFileUpload']//div[contains(text(),'STOP')]")

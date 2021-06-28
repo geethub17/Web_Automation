@@ -33,46 +33,46 @@ public class CommercialMemberInformationContactInfo extends Utils {
 	@FindBy(xpath = "//div[text()='Member Information']")
 	WebElement memberInformationTitle;
 
-	@FindBy(xpath = "(//label[@for='MbrFirstName']//following::div//span)[1]")
+	@FindBy(xpath = "//span[text()='First Name']//following-sibling::div//span")
 	WebElement firstNameInMemberInformationSection;
 
-	@FindBy(xpath = "(//label[@for='MemberLastName']//following::div//span)[1]")
+	@FindBy(xpath = "//span[text()='Last Name']//following-sibling::div//span")
 	WebElement lastNameInMemberInformationSection;
 
-	@FindBy(xpath = "(//label[@for='MbrDOB']//following::div//span)[1]")
+	@FindBy(xpath = "//span[text()='DOB']//following-sibling::div//span")
 	WebElement dobInMemberInformationSection;
 
-	@FindBy(xpath = "(//label[@for='SequenceNumber']//following::div//span)[1]")
+	@FindBy(xpath = "//span[text()='Sequence No.']//following-sibling::div//span")
 	WebElement seqNumberInMemberInformationSection;
 
-	@FindBy(xpath = "(//label[@for='Group']//following::div//span)[1]")
+	@FindBy(xpath = "//span[text()='Group']//following-sibling::div//span")
 	WebElement groupNumberInMemberInformationSection;
 
-	@FindBy(xpath = "(//label[@for='SourceSystemDisplay']//following::div//span)[1]")
+	@FindBy(xpath = "//span[text()='Source System']//following-sibling::div//span")
 	WebElement sourceSystemInMemberInformationSection;
 
-	@FindBy(xpath = "(//label[@for='CoverageStatusDesc']//following::div//span)[1]")
+	@FindBy(xpath = "//span[text()='Member Status']//following-sibling::div//span")
 	WebElement memberStatusInMemberInformationSection;
 
-	@FindBy(xpath = "(//label[@for='Email']//following::div//span)[1]")
+	@FindBy(xpath = "//span[text()='Preferred Email']//following-sibling::div//span")
 	WebElement preferredEmailInMemberInformationSection;
 
-	@FindBy(xpath = "(//label[@for='MailingAddress']//following::div//span)[1]")
+	@FindBy(xpath = "//span[text()='Preferred Mailing Address']//following-sibling::div//span")
 	WebElement preferredEmailAddressLine1InMemberInformationSection;
 
-	@FindBy(xpath = "(//label[@for='MailingAddress']//following::div//span)[2]")
+	@FindBy(xpath = "(//span[text()='Preferred Mailing Address']//parent::div//parent::div//following-sibling::div)[2]//span")
 	WebElement preferredEmailAddressLine2InMemberInformationSection;
 
-	@FindBy(xpath = "(//label[@for='PhoneNumber']//following::div//span)[1]")
+	@FindBy(xpath = "//span[text()='Preferred TelePhone']//following-sibling::div//span")
 	WebElement preferrredTelephoneNumberInMemberInformationSection;
 
-	@FindBy(xpath = "(//label[@for='PreferredText']//following::div//span)[1]")
+	@FindBy(xpath = "//span[text()='Preferred Text']//following-sibling::div//span")
 	WebElement preferredTextInMemberInformationSection;
 
 	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pCommercialMember$pEmailList$l1']//td[@data-attribute-name='Preferred']//span")
 	WebElement preferredValueInMemberEmailSection;
 
-	@FindBy(id = "EmailAddress1")
+	@FindBy(name = "$PpyWorkPage$pCommercialMember$pEmailList$l1$pEmailAddress")
 	WebElement emailAddressValueInMemberEmailSection;
 
 	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pCommercialMember$pEmailList$l1']//td[@data-attribute-name='Email Status']//span")
@@ -129,16 +129,16 @@ public class CommercialMemberInformationContactInfo extends Utils {
 	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pCommercialMember$pMemberPhoneDetails$l1']//td[@data-attribute-name='Source Origin']//span")
 	WebElement sourceOriginInMemberTelephoneNumbersSection;
 
-	@FindBy(css = "select[id='SalesPrefCode1']>option[selected]")
+	@FindBy(css = "select[name='$PpyWorkPage$pCommercialMember$pMemberPhoneDetails$l1$pSalesPrefCode']>option[selected]")
 	WebElement salesValue;
 
-	@FindBy(css = "select[id='NonSalesPrefCode1']>option[selected]")
+	@FindBy(css = "select[name='$PpyWorkPage$pCommercialMember$pMemberPhoneDetails$l1$pNonSalesPrefCode']>option[selected]")
 	WebElement nonSalesValue;
 
-	@FindBy(id = "SalesPrefCode1")
+	@FindBy(name = "$PpyWorkPage$pCommercialMember$pMemberPhoneDetails$l1$pSalesPrefCode")
 	WebElement salesDropDownInMemberTelephoneNumbersSection;
 
-	@FindBy(id = "NonSalesPrefCode1")
+	@FindBy(name = "$PpyWorkPage$pCommercialMember$pMemberPhoneDetails$l1$pNonSalesPrefCode")
 	WebElement nonSalesDropDownInMemberTelephoneNumbersSection;
 
 	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pCommercialMember$pMemberPhoneDetails$l1']//input[@type='checkbox']")

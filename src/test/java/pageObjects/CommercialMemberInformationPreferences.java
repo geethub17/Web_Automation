@@ -144,16 +144,16 @@ public class CommercialMemberInformationPreferences extends Utils {
 	@FindBy(xpath = "//tr[@id='$PpyWorkPage$pCommercialMember$pPrefInfo$l6']//td[@data-attribute-name='Text']//div//img[@role='link']")
 	WebElement textlInHealthAndWellnessInformation;
 
-	@FindBy(id = "MbrSpokenLanguage")
+	@FindBy(name = "$PpyWorkPage$pCommercialMember$pMbrSpokenLanguage")
 	WebElement memberSpokenLanguageDropDown;
 
-	@FindBy(id = "MbrWrittenLanguage")
+	@FindBy(name = "$PpyWorkPage$pCommercialMember$pMbrWrittenLanguage")
 	WebElement memberWrittenLanguageDropDown;
 
-	@FindBy(css = "select[id='MbrSpokenLanguage']>option[selected]")
+	@FindBy(css = "select[name='$PpyWorkPage$pCommercialMember$pMbrSpokenLanguage']>option[selected]")
 	WebElement selectedMemberSpokenLanguage;
 
-	@FindBy(css = "select[id='MbrWrittenLanguage']>option[selected]")
+	@FindBy(css = "select[name='$PpyWorkPage$pCommercialMember$pMbrWrittenLanguage']>option[selected]")
 	WebElement selectedMemberWrittenLanguage;
 
 	@FindBy(xpath = "//div[text()='Reset']")

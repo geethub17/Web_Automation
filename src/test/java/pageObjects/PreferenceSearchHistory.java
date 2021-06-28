@@ -61,10 +61,10 @@ public class PreferenceSearchHistory extends Utils {
 	@FindBy(xpath = "//td[@data-attribute-name='Last Updated Date Time Stamp']//div//span")
 	List<WebElement> allUpdatedDateAndTimeInPreferenceHistoryTable;
 
-	@FindBy(id = "FromDate")
+	@FindBy(name = "$PpyWorkPage$pCommercialMember$pFromDate")
 	WebElement fromDate;
 
-	@FindBy(id = "EmailHistoryEndDate")
+	@FindBy(name = "$PpyWorkPage$pCommercialMember$pEmailHistoryEndDate")
 	WebElement endDate;
 
 	@FindBy(xpath = "//div[text()='Search']")
@@ -76,7 +76,7 @@ public class PreferenceSearchHistory extends Utils {
 	@FindBy(xpath = "//div[text()='Cancel']")
 	WebElement cancelnPreferenceHistory;
 
-	@FindBy(xpath = "//a[text()=' Back To Member Information']")
+	@FindBy(xpath = "//a[text()='Back To Member Information']")
 	WebElement backToMemberInformation;
 
 	@FindBy(xpath = "//th[@data-attribute-name='Contact Channel']//div[@class='cellIn ']")
@@ -103,7 +103,7 @@ public class PreferenceSearchHistory extends Utils {
 	@FindBy(xpath = "//div[@datasource='pyWorkPage.CommercialMember.PreferenceHistory_ComPrefHistoryDetails_1'][contains(@id,'PEGA_GRID')]")
 	WebElement isValuesSorted;
 
-	@FindBy(xpath = "//li[text()='Commercial Member:Please enter From Date and End Date within 1 year range.']")
+	@FindBy(xpath = "//li[text()='Commercial Member: Please enter From Date and End Date within 1 year range.']")
 	WebElement moreThan1Year;
 
 	@FindBy(xpath = "//span[text()='From Date must not be greater than current date.']")

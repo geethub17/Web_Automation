@@ -43,7 +43,7 @@ public class PhoneSearch extends Utils {
 	@FindBy(css = "div[class*='heading_1_dataLabelWrite']")
 	WebElement phoneSearchTitle;
 
-	@FindBy(id = "TelephoneNumber")
+	@FindBy(name = "$PpgPhoneSearch$pTelephoneNumber")
 	WebElement phoneSearchTextBox;
 
 	@FindBy(xpath = "//div[text()='Search']")
@@ -55,10 +55,10 @@ public class PhoneSearch extends Utils {
 	@FindBy(xpath = "//td[@data-attribute-name='Telephone Number']//span")
 	WebElement telephoneNumberInPhoneSearch;
 
-	@FindBy(css = "select[id='SalesPrefCode1']>option")
+	@FindBy(css = "select[id='$PpgPhoneSearch$pNewDetails$l1$pSalesPrefCode']>option")
 	WebElement salesValue;
 
-	@FindBy(css = "select[id='NonSalesPrefCode1']>option[selected]")
+	@FindBy(css = "select[name='$PpgPhoneSearch$pNewDetails$l1$pNonSalesPrefCode']>option[selected]")
 	WebElement nonSalesValue;
 
 	@FindBy(css = "input[id='ReConfirmNonSales1'][disabled]")
@@ -94,7 +94,7 @@ public class PhoneSearch extends Utils {
 	@FindBy(css = "ul[class='pageErrorList layout-noheader-errors']>li")
 	WebElement errorMessage;
 
-	@FindBy(css = "select[id='NonSalesPrefCode1']")
+	@FindBy(css = "select[name='$PpgPhoneSearch$pNewDetails$l1$pNonSalesPrefCode']")
 	WebElement nonSalesPreferenceDropDown;
 
 	@FindBy(xpath = "//div[@id='modaldialog_con']//div[text()='Yes']")

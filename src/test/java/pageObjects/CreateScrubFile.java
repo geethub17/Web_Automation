@@ -24,13 +24,13 @@ public class CreateScrubFile extends Utils {
 	@FindBy(xpath = "//span[text()='Create a Scrub File']")
 	WebElement createAScrubFilePageTitle;
 
-	@FindBy(id = "ScrubFileType")
+	@FindBy(name = "$PpyWorkPage$pFileHeaderDetails$pScrubFileType")
 	WebElement scrubFileTypeDropDown;
 
-	@FindBy(id = "CallType")
+	@FindBy(name = "$PpyWorkPage$pFileHeaderDetails$pCallType")
 	WebElement anthemCallTypeDropDown;
 
-	@FindBy(id = "ProgramName")
+	@FindBy(name = "$PpyWorkPage$pFileHeaderDetails$pProgramName")
 	WebElement programName;
 
 	@FindBy(id = "$PpyWorkPage$ppyFileName")
@@ -60,7 +60,7 @@ public class CreateScrubFile extends Utils {
 	@FindBy(xpath = "//div[@data-node-id='CreateScrubFile'][contains(@uniqueid,'SID')]")
 	WebElement isDropDownValueChanged;
 
-	@FindBy(css = "select[id='CallType']>option[selected]")
+	@FindBy(css = "select[name='$PpyWorkPage$pFileHeaderDetails$pCallType']>option[selected]")
 	WebElement selectedAnthemCallType;
 
 	/* This method is to verify the create a scrub file page title */

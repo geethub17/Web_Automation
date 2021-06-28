@@ -26,28 +26,28 @@ public class MemberSearch extends Utils {
 	@FindBy(xpath = "//div[text()='Member Search']")
 	WebElement memberSearchPageTitle;
 
-	@FindBy(id = "SearchMemberSearch By Subscriber ID")
+	@FindBy(id = "30d0bb36Search By Subscriber ID")
 	WebElement searchBySubscriberId;
 
-	@FindBy(id = "SearchMemberSearch By Member Name")
+	@FindBy(name = "$PpyWorkPage$pMemberSearch$pSearchMember")
 	WebElement searchByMemberName;
 
-	@FindBy(xpath = "//input[@id='SubscriberID']")
+	@FindBy(name = "$PpyWorkPage$pMemberSearch$pSubscriberID")
 	WebElement subscriberId;
 
-	@FindBy(id = "SequenceNumber")
+	@FindBy(name = "$PpyWorkPage$pMemberSearch$pSequenceNumber")
 	WebElement sequenceNumber;
 
-	@FindBy(id = "DateOfBirth")
+	@FindBy(name = "$PpyWorkPage$pMemberSearch$pDateOfBirth")
 	WebElement dateOfBirth;
 
-	@FindBy(id = "MemberState")
+	@FindBy(name = "$PpyWorkPage$pMemberSearch$pMemberState")
 	WebElement memberStateDropDown;
 
-	@FindBy(id = "GroupID")
+	@FindBy(name = "$PpyWorkPage$pMemberSearch$pGroupID")
 	WebElement groupNumber;
 
-	@FindBy(id = "SourceSystem")
+	@FindBy(name = "$PpyWorkPage$pMemberSearch$pSourceSystem")
 	WebElement sourceSystem;
 
 	@FindBy(xpath = "//div[text()='Search']")
@@ -56,16 +56,16 @@ public class MemberSearch extends Utils {
 	@FindBy(xpath = "//div[text()='Reset']")
 	WebElement reset;
 
-	@FindBy(id = "MemberFirstName")
+	@FindBy(name = "$PpyWorkPage$pMemberSearch$pMemberFirstName")
 	WebElement memberFirstNameDropDown;
 
-	@FindBy(id = "pyFirstName")
+	@FindBy(name = "$PpyWorkPage$pMemberSearch$ppyFirstName")
 	WebElement memberFirstNameTextField;
 
-	@FindBy(id = "MbrLastName")
+	@FindBy(name = "$PpyWorkPage$pMemberSearch$pMbrLastName")
 	WebElement memberLastNameDropDown;
 
-	@FindBy(id = "pyLastName")
+	@FindBy(name = "$PpyWorkPage$pMemberSearch$ppyLastName")
 	WebElement memberLastNameTextField;
 
 	@FindBy(xpath = "//div[@data-node-id='SearchByMember'][contains(@uniqueid, SID)]")
@@ -110,19 +110,19 @@ public class MemberSearch extends Utils {
 	@FindBy(xpath = "//td[@data-attribute-name ='Source System']//div//span")
 	List<WebElement> allSourceSystemValuesInSearchResultsTable;
 
-	@FindBy(xpath = "//span[text()='** First Name - This field is required.']")
+	@FindBy(xpath = "//div[@id='$PpyWorkPage$pMemberSearch$ppyFirstNameError']//span")
 	WebElement firstNameRequiredError;
 
-	@FindBy(xpath = "//span[text()='** Last Name - This field is required.']")
+	@FindBy(xpath = "//div[@id='$PpyWorkPage$pMemberSearch$ppyLastNameError']//span")
 	WebElement lastNameRequiredError;
 
-	@FindBy(xpath = "//span[text()='** First Name - Length must be between 3 and 15 characters long.']")
+	@FindBy(xpath = "//div[@id='$PpyWorkPage$pMemberSearch$ppyFirstNameError']//span")
 	WebElement firstNameLengthError;
 
-	@FindBy(xpath = "//span[text()='** Last Name - Length must be between 3 and 15 characters long.']")
+	@FindBy(xpath = "//div[@id='$PpyWorkPage$pMemberSearch$ppyLastNameError']//span")
 	WebElement lastNameLengthError;
 
-	@FindBy(xpath = "//span[text()='** Subscriber ID - This field is required.']")
+	@FindBy(xpath = "//div[@id='$PpyWorkPage$pMemberSearch$pSubscriberIDError']//span")
 	WebElement subscriberRequiredError;
 
 	/*

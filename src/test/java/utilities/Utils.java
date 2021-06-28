@@ -102,7 +102,7 @@ public class Utils extends BaseClass {
 			element.clear();
 			element.sendKeys(text);
 		} catch (Exception e) {
-			System.out.println("Error at sending text: " + e);
+			Assert.fail("Error at sending text: " + e);
 		}
 	}
 
@@ -152,7 +152,7 @@ public class Utils extends BaseClass {
 			 */
 			driver.switchTo().activeElement();
 		} catch (Exception e) {
-			System.out.println("Error at clicking an element: " + e);
+			Assert.fail("Error at clicking an element: " + e);
 		}
 	}
 
@@ -185,7 +185,7 @@ public class Utils extends BaseClass {
 			waitForTheElementToBeVisible(element);
 			return element.getText();
 		} catch (Exception e) {
-			System.out.println("Error at capturing text: " + e);
+			Assert.fail("Error at capturing text: " + e);
 		}
 		return null;
 	}
@@ -292,7 +292,7 @@ public class Utils extends BaseClass {
 			Assert.assertEquals(pageTitle.toLowerCase(), getText(element).toLowerCase());
 			return true;
 		} catch (Exception e) {
-			System.out.println("Exception occured at validating page title" + e);
+			Assert.fail("Exception occured at validating page title: " + e);
 		}
 		return false;
 	}

@@ -27,7 +27,7 @@ public class ConsentOrDncOrWnFileStatus extends Utils {
 	 * captured.
 	 */
 
-	@FindBy(xpath = "//span[text()='Consent/Do Not Call/Wrong Number File Status']")
+	@FindBy(xpath = "//h2[text()='Consent/Do Not Call/Wrong Number File Status']")
 	WebElement consentOrDncOrWnFileStatusPageTitle;
 
 	@FindBy(xpath = "//div[text()='File']")
@@ -48,7 +48,7 @@ public class ConsentOrDncOrWnFileStatus extends Utils {
 	@FindBy(xpath = "//div[text()='File Upload Successful.']")
 	WebElement fileUploadSuccessful;
 
-	@FindBy(xpath = "//div[contains(text(),'ERROR')]")
+	@FindBy(xpath = "//div[contains(text(),'Please select the file to upload')]")
 	WebElement moreThan20000Members;
 
 	@FindBy(xpath = "//td[@data-attribute-name='File']//div//span")

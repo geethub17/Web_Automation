@@ -53,10 +53,10 @@ public class PhoneSearchHistory extends Utils {
 	@FindBy(xpath = "//td[@data-attribute-name='Last Updated Date']//div//span")
 	List<WebElement> allLastUpatedDatesInPhoneHistoryTable;
 
-	@FindBy(id = "FromDate")
+	@FindBy(xpath = "//input[contains(@name,'$pFromDate')]")
 	WebElement fromDate;
 
-	@FindBy(id = "ViewEndaDate")
+	@FindBy(xpath = "//input[contains(@name,'$pViewEndaDate')]")
 	WebElement endDate;
 
 	@FindBy(xpath = "//div[text()='Search']")
