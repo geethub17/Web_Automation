@@ -35,7 +35,7 @@ public class SendReport extends BaseClass {
 	public String URL = propertiesReader.getURL();
 	public String from;
 	public String[] ToAdresses = { "aarisetty.geethanandan@legatohealth.com"
-//			,"BharathKumar.Devisetty@legatohealth.com" 
+			,"BharathKumar.Devisetty@legatohealth.com" 
 //			, "rajeshkumar.soundararajan@legatohealth.com"
 	};
 
