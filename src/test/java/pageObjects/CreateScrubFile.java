@@ -21,7 +21,7 @@ public class CreateScrubFile extends Utils {
 	 * All elements of create a scrub file page are captured.
 	 */
 
-	@FindBy(xpath = "//span[text()='Create a Scrub File']")
+	@FindBy(xpath = "//h2[text()='Create a Scrub File']")
 	WebElement createAScrubFilePageTitle;
 
 	@FindBy(name = "$PpyWorkPage$pFileHeaderDetails$pScrubFileType")
@@ -36,7 +36,7 @@ public class CreateScrubFile extends Utils {
 	@FindBy(id = "$PpyWorkPage$ppyFileName")
 	WebElement chooseFile;
 
-	@FindBy(xpath = "(//div[text()='Cancel'])[2]")
+	@FindBy(xpath = "//div[text()='Cancel']")
 	WebElement cancel;
 
 	@FindBy(xpath = "//div[text()='Reset']")
@@ -115,7 +115,7 @@ public class CreateScrubFile extends Utils {
 
 	/* This method is to click on cancel */
 	public void clickOnCancel() {
-		clickAnElement(cancel);
+		clickElement(cancel);
 	}
 
 	/* This method is to click on reset button */
