@@ -48,7 +48,7 @@ public class ConsentOrDncOrWnFileStatus extends Utils {
 	@FindBy(xpath = "//div[text()='File Upload Successful.']")
 	WebElement fileUploadSuccessful;
 
-	@FindBy(xpath = "//div[contains(text(),'Please select the file to upload')]")
+	@FindBy(xpath = "//div[contains(text(),'ERROR')]")
 	WebElement moreThan20000Members;
 
 	@FindBy(xpath = "//td[@data-attribute-name='File']//div//span")
