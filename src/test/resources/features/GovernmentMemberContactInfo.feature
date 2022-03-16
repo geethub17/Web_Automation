@@ -56,7 +56,7 @@ Feature: Government member contact information
       | test_id | sheetName                 |
       |       1 | GovtMemberContactInfPhone |
 
-  @Regression @GovernmentMember @Update
+  @Regression @GovernmentMember @Update 
   Scenario Outline: Update the mobile preferences in government member contact information page and verify in phone history page
     
     Login to the application

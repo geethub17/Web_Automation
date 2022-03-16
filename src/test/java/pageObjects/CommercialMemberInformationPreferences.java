@@ -1,5 +1,6 @@
 package pageObjects;
 
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -19,6 +20,9 @@ public class CommercialMemberInformationPreferences extends Utils {
 	private String newWrittenLanguage;
 	private String newSpokenLanguage;
 	private boolean noTextNumber = false;
+	private String currentCoveredCAValue;
+	private String newValue;
+	private String currentGenderIdentityPreference;
 
 	public CommercialMemberInformationPreferences(WebDriver driver) {
 		super(driver);
@@ -221,6 +225,18 @@ public class CommercialMemberInformationPreferences extends Utils {
 
 	@FindBy(xpath = "//div[text()='There is no preferred Text Number.']")
 	WebElement noPreferenceTextNumber;
+
+	@FindBy(xpath = "//select[@name='$PpyWorkPage$pCommercialMember$pCAReportingDropDownValues']//option[@selected]")
+	WebElement selectedCoveredCAValue;
+
+	@FindBy(xpath = "//select[@name='$PpyWorkPage$pCommercialMember$pCAReportingDropDownValues']")
+	WebElement coveredCAValueDropDown;
+
+	@FindBy(xpath = "//select[@name='$PpyWorkPage$pCommercialMember$pGenderIdentityDropDownValues']//option[@selected]")
+	WebElement selectedGenderIdentityPreference;
+
+	@FindBy(xpath = "//select[@name='$PpyWorkPage$pCommercialMember$pGenderIdentityDropDownValues']")
+	WebElement genderIdentifyDropDown;
 
 	/* This method is to validate the member preference tab . */
 	public void validateMemberInformationPreferenceTab() {
@@ -547,5 +563,47 @@ public class CommercialMemberInformationPreferences extends Utils {
 		validateTheUpdatedPreferenceDetailsInPreferenceSearchHistory();
 		navigateBackToMemberInformationScreen();
 		commercialMemberInformationContactInfo.navigateToMemberPreferenceTab();
+	}
+
+	/* This method is to update covered CA termination section. */
+	public void updateAndValidateCoveredCATerminationSection(String value1, String value2) {
+		currentCoveredCAValue = getText(selectedCoveredCAValue);
+		String oldAttributeValue = getAttributeValue(isPreferenceValueSelected, "uniqueid");
+
+		if (currentCoveredCAValue.equalsIgnoreCase(value1)) {
+			selectDropDownValueByText(coveredCAValueDropDown, value2);
+			waitTillAttributeValueChanges(isPreferenceValueSelected, oldAttributeValue, "uniqueid");
+			clickOnUpdate();
+			newValue = value2;
+			compareTexts(newValue, getText(selectedCoveredCAValue));
+		} else if (currentCoveredCAValue.equalsIgnoreCase(value2)) {
+			selectDropDownValueByText(coveredCAValueDropDown, value1);
+			waitTillAttributeValueChanges(isPreferenceValueSelected, oldAttributeValue, "uniqueid");
+			clickOnUpdate();
+			newValue = value1;
+			compareTexts(newValue, getText(selectedCoveredCAValue));
+		} else {
+			Assert.fail("The covered CA termination value is not set to either " + value1 + " or " + value2);
+		}
+	}
+
+	/* This method is to update covered CA termination section. */
+	public void updateAndValidateGenderIdentityPreference(String values) {
+		currentGenderIdentityPreference = getText(selectedGenderIdentityPreference);
+		String oldAttributeValue;
+		String[] listOfValuesNeedsToBeUpdates = values.split(";");
+		String itterationValue;
+
+		for (String value : listOfValuesNeedsToBeUpdates) {
+			itterationValue = value.trim();
+			if (!currentGenderIdentityPreference.equalsIgnoreCase(itterationValue)) {
+				oldAttributeValue = getAttributeValue(isPreferenceValueSelected, "uniqueid");
+				selectDropDownValueByText(genderIdentifyDropDown, itterationValue);
+				waitTillAttributeValueChanges(isPreferenceValueSelected, oldAttributeValue, "uniqueid");
+				clickOnUpdate();
+				newValue = itterationValue;
+				compareTexts(newValue, getText(selectedGenderIdentityPreference));
+			}
+		}
 	}
 }

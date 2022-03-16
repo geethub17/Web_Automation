@@ -68,7 +68,7 @@ public class PhoneSearchHistory extends Utils {
 	@FindBy(xpath = "//div[text()='Cancel']")
 	WebElement cancelnPhoneHistory;
 
-	@FindBy(xpath = "//a[text()=' Back To Phone Search Results']")
+	@FindBy(xpath = "//a[text()='Back To Phone Search Results']")
 	WebElement backToPhoneSearchResults;
 
 	@FindBy(xpath = "//th[@data-attribute-name='Telephone Number']//div[@class='cellIn ']")
@@ -167,7 +167,7 @@ public class PhoneSearchHistory extends Utils {
 		if (!validateAscendingSortingOrder(allNonSalesValuesInPhoneHistoryTable)) {
 			Assert.fail("Non sales values are not sorted in ascending order.");
 		}
-		
+
 		clickAnElement(nonSalesHeader);
 		waitForTheElementToBeClickable(nonSalesHeader);
 		if (!validateDescendingSortingOrder(allNonSalesValuesInPhoneHistoryTable)) {
@@ -234,6 +234,7 @@ public class PhoneSearchHistory extends Utils {
 	/* This method is to navigate back to the phone search screen */
 	public void backToPhoneSearchScreen() {
 		clickAnElement(backToPhoneSearchResults);
+		waitForTheElementTobeAbsent(backToPhoneSearchResults);
 		verifyThePageTitle("Phone Search", phoneSearch.phoneSearchTitle);
 	}
 

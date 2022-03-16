@@ -54,7 +54,7 @@ Feature: Consent or Do not call or Wrong number file page
     Given Navigate to consent or do not call or wrong number  page
     And verify the sorting order in consent or do not call or wrong number file status page
 
-  @Regression @ConsentOrDncOrWn @Fix
+  @Regression @ConsentOrDncOrWn
   Scenario Outline: create a consent or do not call or wrong number file with more than  20000 phone numbers
     
     Login to the application

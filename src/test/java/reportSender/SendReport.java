@@ -34,8 +34,9 @@ public class SendReport extends BaseClass {
 	public String browser = propertiesReader.getBrowserType();
 	public String URL = propertiesReader.getURL();
 	public String from;
-	public String[] ToAdresses = { "aarisetty.geethanandan@legatohealth.com"
-			,"BharathKumar.Devisetty@legatohealth.com" 
+	public String[] ToAdresses = { "DL-Legacy-Desktop-IT@anthem.com"
+//			"aarisetty.geethanandan@legatohealth.com"
+//			,"BharathKumar.Devisetty@legatohealth.com" 
 //			, "rajeshkumar.soundararajan@legatohealth.com"
 	};
 
@@ -101,10 +102,8 @@ public class SendReport extends BaseClass {
 			BodyPart messageBodyPart = new MimeBodyPart();
 			messageBodyPart.setText("Hello everyone, Good day! \n" + "\n"
 					+ "All scenarios have been executed. Please find the attached report for execution metrics.  \n"
-					+ "\n" + "Environment URL: " + URL + "\n" + "Browser: " + browser + "\n"  + "\n"
-					+ "This is an automated mail please do not reply . \n" + "\n"
-					+ "Team,\n"
-					+ "CPSUI QA Automation.");
+					+ "\n" + "Environment URL: " + URL + "\n" + "\n"+ "Browser: " + browser + "\n" + "\n"
+					+ "This is an automated mail please do not reply . \n" + "\n" + "Team,\n" + "CPSUI QA Automation.");
 
 			/* Adding the attachment to the mail. */
 			File file = new File(System.getProperty("user.dir") + reportPath);

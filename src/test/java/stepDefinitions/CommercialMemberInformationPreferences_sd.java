@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 
 public class CommercialMemberInformationPreferences_sd extends BaseClass {
@@ -98,8 +99,20 @@ public class CommercialMemberInformationPreferences_sd extends BaseClass {
 	}
 
 	@Then("update the health and wellness programs section with {string}, {string} , {string} and {string} and validate the details in preference history page")
-	public void update_the_health_and_wellness_programs_section (String string, String string2, String string3, String string4) {
+	public void update_the_health_and_wellness_programs_section(String string, String string2, String string3,
+			String string4) {
 		commercialMemberInformationPreferences.updateAndValidateAllPreferencesInWellnessProgramsSection();
 	}
+
+	@And("update and validate the Covered CA Termination Reporting preference with {string} and {string} details")
+	public void update_the_covered_CA_Termination_Reporting(String string, String string2) {
+		commercialMemberInformationPreferences.updateAndValidateCoveredCATerminationSection(
+				fieldsAndValues.get("covCA_Value1"), fieldsAndValues.get("covCA_Value2"));
+	}
 	
+	@And("update and validate the gender identify preference with {string}")
+	public void update_the_genderIdentify_Preference(String string) {
+		commercialMemberInformationPreferences.updateAndValidateGenderIdentityPreference(
+				fieldsAndValues.get("gender_Identity_values"));
+	}
 }

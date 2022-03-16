@@ -76,3 +76,35 @@ Feature: Commercial member preferences
     Examples: 
       | test_id | sheetName                      |
       |      12 | Cmrcl_Mbr_Text_Mail_Email_Pref |
+
+  @Regression @CommercialMember @Update
+  Scenario Outline: Update and validate all the preference options under Covered CA Termination Reporting
+    
+    Login to the application
+
+    Given get data from datasheet with "<test_id>" and "<sheetName>"
+    Given Navigate to member search page
+    And select the search by subscriber id option then search for the member by using "<subscriberId>" , "<seqNumber>" , "<dob>","<memberState>", "<groupNumber>" and select the "<sourceSystem>"
+    Then click on member last name based on "<seqNumber>", "<firstName>", "<lastName>", "<dob>"
+    Then click on preference tab in member information page
+    And update and validate the Covered CA Termination Reporting preference with "<covCA_Value1>" and "<covCA_Value2>" details
+
+    Examples: 
+      | test_id | sheetName                      |
+      |      19 | Cmrcl_Mbr_Text_Mail_Email_Pref |
+
+  @Regression @CommercialMember @Update 
+  Scenario Outline: Update and validate all the preference options under Gender Identity Preference
+    
+    Login to the application
+
+    Given get data from datasheet with "<test_id>" and "<sheetName>"
+    Given Navigate to member search page
+    And select the search by subscriber id option then search for the member by using "<subscriberId>" , "<seqNumber>" , "<dob>","<memberState>", "<groupNumber>" and select the "<sourceSystem>"
+    Then click on member last name based on "<seqNumber>", "<firstName>", "<lastName>", "<dob>"
+    Then click on preference tab in member information page
+    And update and validate the gender identify preference with "<gender_Identity_values>"
+
+    Examples: 
+      | test_id | sheetName                      |
+      |      20 | Cmrcl_Mbr_Text_Mail_Email_Pref |
