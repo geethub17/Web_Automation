@@ -149,6 +149,7 @@ public class MemberSearch extends Utils {
 		oldAttributeValue = isSearchResultsDisplayed.getAttribute("uniqueid");
 		clickAnElement(searchBySubscriberId);
 		waitTillAttributeValueChanges(isSearchResultsDisplayed, oldAttributeValue, "uniqueid");
+		clickAnElement(this.subscriberId);
 		enterTheText(this.subscriberId, subscriberId);
 		if (seqNo != null) {
 			enterTheText(sequenceNumber, seqNo);
