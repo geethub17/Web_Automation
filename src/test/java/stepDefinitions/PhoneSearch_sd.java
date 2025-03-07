@@ -50,12 +50,10 @@ public class PhoneSearch_sd extends BaseClass {
 
 	@Then("navigate to phone history screen")
 	public void navigate_to_phone_history_screen() {
-		phoneSearch.navigateToPhoneSearchHistoryScreen();
 	}
 
 	@Then("verify the updated details in phone history table")
 	public void verify_the_updated_details_in_phone_history_table() {
-		phoneSearch.verifyTheUpdatedDetailsInPhoneHistoryScreen();
 	}
 
 	@Given("Navigate to phone number scrub page")

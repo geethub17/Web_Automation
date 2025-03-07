@@ -323,7 +323,7 @@ public class Utils extends BaseClass {
 
 			/*
 			 * System.out.println("Collection ascending sorted listed: " +
-			 * collectionSortedList); System.out.println("CPSUI ascending sorted listed: " +
+			 * collectionSortedList); System.out.println("Application ascending sorted listed: " +
 			 * ascendingOrderedList);
 			 */
 			return isSorted;
@@ -344,7 +344,7 @@ public class Utils extends BaseClass {
 
 			/*
 			 * System.out.println("Collection descending sorted listed: " +
-			 * collectionSortedList); System.out.println("CPSUI descending sorted listed: "
+			 * collectionSortedList); System.out.println("Application descending sorted listed: "
 			 * + descendingOrderedList);
 			 */
 			return isSorted;

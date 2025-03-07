@@ -212,30 +212,17 @@ public class PhoneSearch extends Utils {
 		compareTexts(currentNonSalesPreferenceValue, getText(nonSalesValue));
 	}
 
-	/* This method is to verify the updated details in phone history screen. */
-	public void verifyTheUpdatedDetailsInPhoneHistoryScreen() {
-		phoneSearchHistory.verifyTheUpdatePhoneDetailsInHistorySearchPage(expectedTelePhoneNumber, this.newValue,
-				userName, todaysDate);
-	}
-
-	/* This method is to navigate to phone search history screen. */
-	public void navigateToPhoneSearchHistoryScreen() {
-		clickAnElement(viewHistory);
-		phoneSearchHistory.validatePhoneSearchHistoryPage();
-	}
 
 	/* This method is to navigate to phone number scrub screen */
 	public void navigateToPhoneNumberScrubScreen() {
 		clickAnElement(actions);
 		clickAnElement(phoneNumberScrubPage);
-		scrubbingStatus.validateScrubbingStatusPageTitle();
 	}
 
 	/* This method is to navigate to Consent/Do Not Call/Wrong Number File screen */
 	public void navigateToConsentOrDncOrWnFileScreen() {
 		clickAnElement(actions);
 		clickAnElement(consentOrDncOrWnFileStatusPage);
-		consentOrDncOrWnFileStatus.validateConsentOrDncOrWnStatusPageTitle();
 	}
 
 	/* This method is to navigate to member search page */

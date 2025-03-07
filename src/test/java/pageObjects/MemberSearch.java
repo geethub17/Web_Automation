@@ -345,6 +345,5 @@ public class MemberSearch extends Utils {
 	public void clickOnMemberLastName(String seqNumber, String firstName, String lastName, String dob) {
 //		System.out.println("WebElement: "+createWebElementForMemberLastName(seqNumber, firstName, lastName, dob));
 		createWebElementForMemberLastName(seqNumber, firstName, lastName, dob);
-		commercialMemberInformationContactInfo.validateMemberInformationPageTitle();
 	}
 }

@@ -43,7 +43,7 @@ public class Driver extends BaseClass {
 	}
 
 	@Before
-	public void loginCPSUI() throws MalformedURLException {
+	public void loginApplication() throws MalformedURLException {
 		if (runType.equalsIgnoreCase("local")) {
 			if (browserType.equalsIgnoreCase("chrome")) {
 				/* Setting up the chrome driver Path */
@@ -125,12 +125,12 @@ public class Driver extends BaseClass {
 		login.setUserName(propertiesReader.getUserName());
 		login.setPassword(propertiesReader.getPassword());
 		login.clickLogin();
-		Assert.assertEquals("CPSUI", driver.getTitle());
+		Assert.assertEquals("Application", driver.getTitle());
 
 	}
 
 	@After
-	public void logOutCPSUI() throws InterruptedException {
+	public void logOutApplication() throws InterruptedException {
 		login.clickLogOut();
 		driver.quit();
 	}

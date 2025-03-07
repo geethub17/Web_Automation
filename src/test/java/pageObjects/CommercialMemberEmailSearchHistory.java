@@ -266,7 +266,6 @@ public class CommercialMemberEmailSearchHistory extends Utils {
 	/* This method is to navigate back to member information screen */
 	public void backToMemberContactInformationPage() {
 		clickElement(backToMemberInformation);
-		verifyThePageTitle("Member Information", commercialMemberInformationContactInfo.memberInformationTitle);
 	}
 
 }

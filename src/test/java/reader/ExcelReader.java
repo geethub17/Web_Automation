@@ -24,7 +24,7 @@ public class ExcelReader extends BaseClass {
 	private XSSFCell cell;
 
 	public ExcelReader(String testId, String sheetName) {
-		file = new File(System.getProperty("user.dir") + "//data//CPSUI_Automation_Data.xlsx");
+		file = new File(System.getProperty("user.dir") + "//data//Application_Automation_Data.xlsx");
 		try {
 			inputStream = new FileInputStream(file);
 		} catch (FileNotFoundException e) {

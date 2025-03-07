@@ -10,7 +10,7 @@ public class RunnerForParllel {
 	public void test() {
 		String[] params = new String[] { 
 				"-p","pretty",
-				"-p", "html:report/CPSUI_Report.html", 
+				"-p", "html:report/Application_Report.html", 
 				"-g","stepDefinitions",	
 				"-g","driver",
 				"-t","@PhoneSearch", 

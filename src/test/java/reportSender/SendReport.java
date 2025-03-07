@@ -30,14 +30,12 @@ public class SendReport extends BaseClass {
 		propertiesReader = new PropertiesReader();
 	}
 
-	public String host = "smtpinternal.wellpoint.com";
+	public String host = "smtpinternal.abc.com";
 	public String browser = propertiesReader.getBrowserType();
 	public String URL = propertiesReader.getURL();
 	public String from;
-	public String[] ToAdresses = { "DL-Legacy-Desktop-IT@anthem.com"
-//			"aarisetty.geethanandan@legatohealth.com"
-//			,"BharathKumar.Devisetty@legatohealth.com" 
-//			, "rajeshkumar.soundararajan@legatohealth.com"
+	public String[] ToAdresses = { "abc@gmail.com"
+
 	};
 
 	public void triggerMail(String reportName, String reportPath)
@@ -76,7 +74,7 @@ public class SendReport extends BaseClass {
 			 * Example: Sender name will be displayed as the input of setFrom method.
 			 */
 			MimeMessage message = new MimeMessage(session);
-			message.setFrom(new InternetAddress("CPSUI_Automation"));
+			message.setFrom(new InternetAddress("Application_Automation"));
 
 			/* Setting the string value type as address */
 			InternetAddress[] recipients = new InternetAddress[ToAdresses.length];
@@ -96,21 +94,21 @@ public class SendReport extends BaseClass {
 			String currentDateAndTime = formatter.format(dt);
 
 			/* Set subject of the mail */
-			message.setSubject("CPSUI automation " + reportName.toLowerCase() + " on " + currentDateAndTime);
+			message.setSubject("Application automation " + reportName.toLowerCase() + " on " + currentDateAndTime);
 
 			/* Set body of the mail */
 			BodyPart messageBodyPart = new MimeBodyPart();
 			messageBodyPart.setText("Hello everyone, Good day! \n" + "\n"
 					+ "All scenarios have been executed. Please find the attached report for execution metrics.  \n"
 					+ "\n" + "Environment URL: " + URL + "\n" + "\n"+ "Browser: " + browser + "\n" + "\n"
-					+ "This is an automated mail please do not reply . \n" + "\n" + "Team,\n" + "CPSUI QA Automation.");
+					+ "This is an automated mail please do not reply . \n" + "\n" + "Team,\n" + "Application QA Automation.");
 
 			/* Adding the attachment to the mail. */
 			File file = new File(System.getProperty("user.dir") + reportPath);
 			BodyPart messageBodyPart_2 = new MimeBodyPart();
 			DataSource source = new FileDataSource(file.getAbsolutePath());
 			messageBodyPart_2.setDataHandler(new DataHandler(source));
-			messageBodyPart_2.setFileName("CPSUI_" + reportName + ".html");
+			messageBodyPart_2.setFileName("Application_" + reportName + ".html");
 
 			/* Clubbing the subject and body of mail. */
 			Multipart multipart = new MimeMultipart();
